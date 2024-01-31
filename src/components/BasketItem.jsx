@@ -16,7 +16,7 @@ export default function BasketItem() {
                     <span className="basketItems_details_price">£0.00</span>
                     <div className="qty">
                         <span>Qty:</span>
-                        <input type="number" min={1} />
+                        <input type="number" min={1} defaultValue={1} />
                     </div>
                 </div>
             </div>
