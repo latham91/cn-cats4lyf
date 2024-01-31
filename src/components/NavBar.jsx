@@ -6,14 +6,13 @@ import "./NavBar.css";
 export default function NavBar() {
     return (
         <section id="navBar">
-            <nav className="navbar-container">
-                <div className="logo">
-                    <Link to="/">
-                    <img src={Logo} alt="logo"/>
-                    </Link>
+            <nav>
+                <div>
+                    <Link></Link>
                 </div>
-                <div className="pages">
-                    <Link to="/Cats/:id">Cat Page</Link>
+                <div>
+                    <Link to="/">Homepage</Link>
+                    <Link to="/Cats/:id">CatPage</Link>
                     <Link to="/About">About</Link>
                     <Link to="/Checkout">Checkout</Link>
                 </div>
@@ -21,5 +20,3 @@ export default function NavBar() {
         </section>
     );
 }
-
-
