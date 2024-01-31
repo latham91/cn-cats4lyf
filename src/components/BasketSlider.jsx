@@ -1,3 +1,4 @@
+import BasketItem from "./BasketItem";
 import "./BasketSlider.css";
 
 import { FaXmark } from "react-icons/fa6";
@@ -16,12 +17,7 @@ export default function BasketSlider() {
                     </p>
                 </div>
                 <div className="sliderItems">
-                    <div className="basketItem">
-                        <div className="basketItem_imageContainer">
-                            <img src="" alt="" />
-                        </div>
-                        <div className="basketItem_content"></div>
-                    </div>
+                    <BasketItem />
                 </div>
                 <div className="sliderFooter">
                     <p className="sliderFooter_total">
