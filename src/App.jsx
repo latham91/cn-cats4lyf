@@ -13,6 +13,7 @@ import BasketSlider from "./components/BasketSlider";
 export default function App() {
     const [toggleBasket, setToggleBasket] = useState(true);
 
+    // Open and close the basket slider.
     const handleToggleBasket = () => {
         setToggleBasket(!toggleBasket);
     };

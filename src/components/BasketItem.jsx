@@ -5,7 +5,7 @@ import { FaRegTrashCan } from "react-icons/fa6";
 export default function BasketItem() {
     return (
         <div className="basketItem">
-            <img src="https://via.placeholder.com/120x120" alt="placeholder image" />
+            <img src="https://via.placeholder.com/120x120" alt="placeholder image" draggable={false} />
             <div className="basketItem_content">
                 <div className="basketItem_product_name">
                     <h4>Product Name</h4>
@@ -14,11 +14,9 @@ export default function BasketItem() {
                 <span>SKU ID: 001</span>
                 <div className="basketItem_details">
                     <span className="basketItems_details_price">£0.00</span>
-                    <div>
-                        <span>
-                            <strong className="qty">Qty:</strong>
-                            <input type="number" min={1} />
-                        </span>
+                    <div className="qty">
+                        <span>Qty:</span>
+                        <input type="number" min={1} defaultValue={1} />
                     </div>
                 </div>
             </div>
