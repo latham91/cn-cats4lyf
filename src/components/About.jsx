@@ -20,4 +20,4 @@ const AboutUs = () => {
 };
 
 
-export default App;
+export default AboutUs
