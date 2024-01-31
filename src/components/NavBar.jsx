@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import Logo from "../images/logo.png";
 
 export default function NavBar() {
     return (
@@ -7,7 +7,7 @@ export default function NavBar() {
             <nav className="logo">
                 <div>
                     <Link to="/">
-                    <img src={Logo} alt="logo"/>
+                        <img src={Logo} alt="logo" />
                     </Link>
                 </div>
                 <div className="pages">
@@ -20,5 +20,3 @@ export default function NavBar() {
         </section>
     );
 }
-
-
