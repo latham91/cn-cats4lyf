@@ -17,6 +17,7 @@
     background-color: white;
     width: 30%;
     padding: 20px;
+    color: black;
 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
@@ -86,4 +87,36 @@
 }
 ::-webkit-scrollbar-track {
     background: transparent;
+}
+
+/* ANIMATION CLASSES */
+.slideIn {
+    animation: slideIn 300ms ease-in-out;
+}
+
+.slideOut {
+    animation: slideOut 300ms ease-in-out;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
 }
