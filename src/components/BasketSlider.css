@@ -28,7 +28,7 @@
 }
 
 .sliderHeader {
-    border-bottom: 1px solid black;
+    border-bottom: 1px dashed black;
     margin-bottom: 25px;
     padding: 20px;
 }
@@ -40,7 +40,7 @@
 
     h3 {
         margin: 0;
-        font-size: 25px;
+        font-size: 35px;
     }
 
     .sliderClose {
@@ -55,6 +55,7 @@
 
 .sliderFooter {
     margin-top: auto;
+    border-top: 1px dashed black;
 
     .sliderFooter_button {
         width: 100%;

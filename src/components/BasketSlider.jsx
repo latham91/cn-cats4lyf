@@ -11,7 +11,7 @@ export default function BasketSlider({ toggleBasket }) {
     const sliderBg = useRef();
 
     const handleCloseSlider = (e) => {
-        // If user clicks on the slider background or the X icon, close the basket
+        // If user clicks outside the slider or the X icon, close the basket
         if (e.target === sliderBg.current || e.target.classList.contains("sliderClose")) {
             setSlideIn(!slideIn);
 
@@ -27,7 +27,6 @@ export default function BasketSlider({ toggleBasket }) {
                 <div className="sliderHeader">
                     <div className="sliderHeader_title">
                         <h3>Basket</h3>
-
                         <BsXLg className="sliderClose" onClick={(e) => handleCloseSlider(e)} size={28} />
                     </div>
                     <p>

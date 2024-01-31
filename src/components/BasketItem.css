@@ -31,6 +31,10 @@
         justify-content: space-between;
         align-items: center;
 
+        h4 {
+            font-size: 18px;
+        }
+
         .trashIcon {
             transition: 300ms ease-in-out;
 
@@ -53,14 +57,19 @@
 
     .basketItems_details_price {
         font-size: 18px;
+    }
 
-        .qty {
-            font-size: 18px;
+    .qty {
+        span {
+            font-size: 16px;
+            margin-right: 10px;
         }
     }
 
     input {
         width: 50px;
         height: 30px;
+        font-size: 16px;
+        text-align: center;
     }
 }
