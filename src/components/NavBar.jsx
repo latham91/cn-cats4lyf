@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import Logo from "../images/logo.png";
+import  Logo from "../images/Logo.png"
+import "./NavBar.css";
+
 
 export default function NavBar() {
     return (
         <section id="navBar">
-            <nav className="logo">
+            <nav>
                 <div>
-                    <Link to="/">
-                        <img src={Logo} alt="logo" />
-                    </Link>
+                    <Link></Link>
                 </div>
-                <div className="pages">
+                <div>
                     <Link to="/">Homepage</Link>
                     <Link to="/Cats/:id">CatPage</Link>
                     <Link to="/About">About</Link>
