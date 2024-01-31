@@ -63,6 +63,12 @@
         border-radius: 10px;
         color: white;
         font-weight: bolder;
+        transition: 300ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #1c1c1c;
+        }
     }
 
     .sliderFooter_total {
