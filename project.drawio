@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="xva2MECG3VPQPZKDk1kb" name="Page-1">
-        <mxGraphModel dx="587" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel dx="226" dy="196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -12,9 +12,6 @@
                 </mxCell>
                 <mxCell id="2" value="API" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="260" y="110" width="120" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="6" value="&lt;a style=&quot;box-sizing: inherit; color: var(--color-accent-fg); text-decoration-line: none; font-family: -apple-system, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 16px; letter-spacing: 0.14994px; text-align: start;&quot; target=&quot;_blank&quot; href=&quot;https://api.thecatapi.com/v1/images/search?limit=10&quot;&gt;https://api.thecatapi.com/v1/images/search?limit=10&lt;/a&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;labelBackgroundColor=default;" parent="1" vertex="1">
-                    <mxGeometry x="160" y="240" width="400" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="THIRD PARTY PACKAGES" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=default;" parent="1" vertex="1">
                     <mxGeometry x="630" y="90" width="180" height="40" as="geometry"/>
@@ -155,7 +152,7 @@
                     <mxGeometry x="1430" y="40" width="150" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="67" value="https://api.thecatapi.com/v1/images/search?limit=10&amp;amp;breed_ids=beng&amp;amp;api_key=live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="60" y="240" width="480" height="20" as="geometry"/>
+                    <mxGeometry x="70" y="240" width="480" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="71" value="" style="edgeStyle=none;html=1;fontSize=6;" parent="1" source="68" target="70" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
