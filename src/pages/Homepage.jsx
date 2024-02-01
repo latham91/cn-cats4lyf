@@ -1,5 +1,6 @@
 import "./Homepage.css";
 import PropTypes from "prop-types";
+import FakerData from "./utility/FakerData"
 
 import { Card } from "../components/Card";
 
@@ -13,7 +14,7 @@ export default function Homepage({ cats, loading }) {
                             key={cat.id}
                             imgSrc={cat.url}
                             imgAlt="image name"
-                            title="Cat Name"
+                            // title={}
                             description="lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                             buttonText="Add to Basket"
                         />

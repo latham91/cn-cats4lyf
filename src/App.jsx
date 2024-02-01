@@ -12,6 +12,8 @@ import BasketSlider from "./components/BasketSlider";
 
 const apiKey = "live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw";
 
+
+
 export default function App() {
     const [toggleBasket, setToggleBasket] = useState(false);
     const [catData, setCatData] = useState([]);
