@@ -65,8 +65,8 @@ export default function App() {
         setToggleBasket(!toggleBasket);
     };
 
-    const handleAddToBasket = (id, name, price) => {
-        setBasketItems([...basketItems, { id, name, price }]);
+    const handleAddToBasket = (id, name, price, breed, imgSrc) => {
+        setBasketItems([...basketItems, { id, name, price, breed, url: imgSrc }]);
 
         console.log(basketItems);
     };
@@ -83,7 +83,7 @@ export default function App() {
                 <Route path="/About" element={<AboutUs />} />
                 <Route path="/Checkout" element={<CheckOut />} />
             </Routes>
-            {toggleBasket && <BasketSlider toggleBasket={handleToggleBasket} />}
+            {toggleBasket && <BasketSlider toggleBasket={handleToggleBasket} basketItems={basketItems} />}
         </>
     );
 }

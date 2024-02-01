@@ -18,7 +18,6 @@ export default function Homepage({ cats, loading, addToBasket }) {
                             breed={cat.breed}
                             imgSrc={cat.url}
                             link={`/Cats/${cat.id}`}
-                            buttonText="Add to Basket"
                             addToBasket={addToBasket}
                         />
                     ))
