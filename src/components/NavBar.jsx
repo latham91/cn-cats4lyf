@@ -16,7 +16,7 @@ export default function NavBar({ toggleBasket }) {
                     </div>
                 </Link>
                 <div className="pages">
-                    <Link to="/Cats/:id">CatPage</Link>
+                    {/* <Link to="/Cats/:id">CatPage</Link> */}
                     <Link to="/About">About</Link>
                     <div onClick={toggleBasket} className="cart-container_basket">
                         <BsBasket size={40} />
