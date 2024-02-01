@@ -1,0 +1,36 @@
+
+
+#navBar {
+    background-color: darkgray;
+    color: white;
+    padding: 1em;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 2em;
+    img {
+        height: 200px;
+    }
+}
+
+.pages a {
+    font-size: 4em;
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    transition: font-size 0.3s ease;
+}
+
+
+.pages a:hover {
+    font-size: 4.10em;
+    text-decoration:overline
+    
+}
