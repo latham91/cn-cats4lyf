@@ -15,21 +15,32 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 25%;
+    width: 30%;
     padding: 20px;
+    color: black;
+
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
+.sliderItems {
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+.sliderHeader {
+    border-bottom: 1px dashed black;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
 .sliderHeader_title {
-    border-bottom: 1px solid black;
-    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     h3 {
         margin: 0;
-        font-size: 25px;
+        font-size: 35px;
     }
 
     .sliderClose {
@@ -44,6 +55,7 @@
 
 .sliderFooter {
     margin-top: auto;
+    border-top: 1px dashed black;
 
     .sliderFooter_button {
         width: 100%;
@@ -53,6 +65,12 @@
         border-radius: 10px;
         color: white;
         font-weight: bolder;
+        transition: 300ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #1c1c1c;
+        }
     }
 
     .sliderFooter_total {
@@ -60,5 +78,46 @@
         gap: 5px;
         justify-content: flex-end;
         font-size: 20px;
+    }
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* ANIMATION CLASSES */
+.slideIn {
+    animation: slideIn 300ms ease-in-out;
+}
+
+.slideOut {
+    animation: slideOut 300ms ease-in-out;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
     }
 }

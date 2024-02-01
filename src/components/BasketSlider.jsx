@@ -1,27 +1,40 @@
 import "./BasketSlider.css";
+import PropTypes from "prop-types";
+import { BsXLg } from "react-icons/bs";
+import { useState, useRef } from "react";
 
-import { FaXmark } from "react-icons/fa6";
+// Component Imports
+import BasketItem from "./BasketItem";
 
-export default function BasketSlider() {
+export default function BasketSlider({ toggleBasket }) {
+    const [slideIn, setSlideIn] = useState(false);
+    const sliderBg = useRef();
+
+    const handleCloseSlider = (e) => {
+        // If user clicks outside the slider or the X icon, close the basket
+        if (e.target === sliderBg.current || e.target.classList.contains("sliderClose")) {
+            setSlideIn(!slideIn);
+
+            setTimeout(() => {
+                toggleBasket();
+            }, 250);
+        }
+        return;
+    };
     return (
-        <div className="sliderBackground">
-            <div className="sliderContent">
+        <div ref={sliderBg} onClick={(e) => handleCloseSlider(e)} className="sliderBackground">
+            <div className={`sliderContent ${slideIn ? "slideOut" : "slideIn"}`}>
                 <div className="sliderHeader">
                     <div className="sliderHeader_title">
                         <h3>Basket</h3>
-                        <FaXmark size={28} className="sliderClose" />
+                        <BsXLg className="sliderClose" onClick={(e) => handleCloseSlider(e)} size={28} />
                     </div>
                     <p>
                         You have <strong>0 items</strong> in your basket.
                     </p>
                 </div>
                 <div className="sliderItems">
-                    <div className="basketItem">
-                        <div className="basketItem_imageContainer">
-                            <img src="" alt="" />
-                        </div>
-                        <div className="basketItem_content"></div>
-                    </div>
+                    <BasketItem />
                 </div>
                 <div className="sliderFooter">
                     <p className="sliderFooter_total">
@@ -34,3 +47,7 @@ export default function BasketSlider() {
         </div>
     );
 }
+
+BasketSlider.propTypes = {
+    toggleBasket: PropTypes.func.isRequired,
+};
