@@ -22,7 +22,7 @@ export default function App() {
         try {
             setLoading(true);
             const response = await fetch(
-                `https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=${apiKey}`
+                `https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=1&api_key=${apiKey}`
             );
 
             if (!response.ok) {
