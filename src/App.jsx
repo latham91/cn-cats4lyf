@@ -9,6 +9,7 @@ import CheckOut from "./pages/CheckOut";
 import NavBar from "./components/NavBar";
 import AboutUs from "./pages/About";
 import BasketSlider from "./components/BasketSlider";
+import { Card } from "./components/Card";
 
 export default function App() {
     const [toggleBasket, setToggleBasket] = useState(true);
