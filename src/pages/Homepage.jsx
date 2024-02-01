@@ -14,6 +14,7 @@ export default function Homepage({ cats, loading }) {
                             imgSrc={cat.url}
                             imgAlt="image name"
                             title="Cat Name"
+                            link={`/Cats/${cat.id}`}
                             description="lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                             buttonText="Add to Basket"
                         />
