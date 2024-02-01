@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { Card } from "../components/Card";
 
-export default function Homepage({ cats, loading }) {
+export default function Homepage({ cats, loading, addToBasket }) {
     return (
         <section id="homepage">
             <div className="catsContainer">
@@ -11,10 +11,15 @@ export default function Homepage({ cats, loading }) {
                     cats.map((cat) => (
                         <Card
                             key={cat.id}
-                            breed={cat.breeds[0].name}
+                            id={cat.id}
+                            name={cat.name}
+                            price={cat.price}
+                            description={cat.description}
+                            breed={cat.breed}
                             imgSrc={cat.url}
                             link={`/Cats/${cat.id}`}
                             buttonText="Add to Basket"
+                            addToBasket={addToBasket}
                         />
                     ))
                 ) : (
@@ -30,5 +35,5 @@ export default function Homepage({ cats, loading }) {
 Homepage.propTypes = {
     cats: PropTypes.array,
     loading: PropTypes.bool,
+    addToBasket: PropTypes.func,
 };
-
