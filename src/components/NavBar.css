@@ -1,9 +1,6 @@
-
-
 #navBar {
-    background-color: darkgray;
-    color: white;
-    padding: 1em;
+    background-color: white;
+    padding: 10px;
 }
 
 .navbar-container {
@@ -12,25 +9,19 @@
     align-items: center;
 }
 
-.logo {
-    margin-left: 2em;
-    img {
-        height: 200px;
-    }
-}
-
-.pages a {
-    font-size: 4em;
-    margin-right: 30px;
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
+.logo img {
+    width: 100px;
     transition: font-size 0.3s ease;
 }
 
+.pages a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 3em;
+    font-weight: bolder;
+}
 
 .pages a:hover {
-    font-size: 4.10em;
-    text-decoration:overline
-    
+    text-decoration: underline;
 }
