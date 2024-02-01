@@ -1,9 +1,6 @@
-
-
 #navBar {
-    background-color: darkgray;
-    color: white;
-    padding: 1em;
+    background-color: white;
+    padding: 10px;
 }
 
 .navbar-container {
@@ -13,24 +10,60 @@
 }
 
 .logo {
-    margin-left: 2em;
-    img {
-        height: 200px;
-    }
+    display: flex;
+    align-items: center;
 }
 
-.pages a {
-    font-size: 4em;
-    margin-right: 30px;
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
+.logo img {
+    width: 120px;
     transition: font-size 0.3s ease;
 }
 
+.logo h1 {
+    color:black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    text-decoration: none;
+}
+
+
+.pages{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.pages a {
+    text-decoration: none;
+    color: black;
+    font-size: 3em;
+    font-weight: bolder;
+}
 
 .pages a:hover {
-    font-size: 4.10em;
-    text-decoration:overline
-    
+    text-decoration: underline;
+}
+
+.cart-container_basket {
+    display: flex;
+    align-items: center;
+    color: black;
+    gap: 3px;
+}
+
+.cart-container_basket p {
+    color: white;
+    font-weight: bolder;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 20px;
 }
