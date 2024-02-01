@@ -3,6 +3,7 @@ import { faker } from '@faker-js/faker';
 
 export function fakerData() {
   return {
+    name: faker.person.firstName(),
     price: faker.commerce.price({ min: 100, max: 500, dec: 0, symbol: '£' }),
     sex: faker.person.sexType()
   };
