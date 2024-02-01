@@ -31,3 +31,4 @@ Homepage.propTypes = {
     cats: PropTypes.array,
     loading: PropTypes.bool,
 };
+

@@ -8,7 +8,6 @@ export const Card = ({ imgSrc, link, breed }) => {
     const catCardData = fakerData()
 
     const description = descriptions[Math.floor(Math.random()*20)]
-    console.log(description)
 
     return (
         <div className="card-container">
