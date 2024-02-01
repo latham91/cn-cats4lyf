@@ -1,12 +1,10 @@
 import PropTypes from "prop-types";
 import "./Card.css";
 import { Link } from "react-router-dom";
-import { fakerData, descriptions } from "../utility/FakerData"
+import { fakerData, descriptions } from "../utility/FakerData";
 
 export const Card = ({ imgSrc, link, breed }) => {
-
-    const catCardData = fakerData()
-
+    const catCardData = fakerData();
     const description = descriptions[Math.floor(Math.random()*20)]
 
     return (
