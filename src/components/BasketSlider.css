@@ -54,6 +54,10 @@
     }
 }
 
+.sliderHeader_desc {
+    font-size: 20px;
+}
+
 .sliderFooter {
     margin-top: auto;
     border-top: 1px dashed black;
@@ -78,7 +82,8 @@
         display: flex;
         gap: 5px;
         justify-content: flex-end;
-        font-size: 20px;
+        font-size: 30px;
+        padding: 0 20px;
     }
 }
 

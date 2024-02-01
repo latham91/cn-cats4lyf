@@ -29,7 +29,7 @@ export default function BasketSlider({ toggleBasket, basketItems, deleteFromBask
                         <h3>Basket</h3>
                         <BsXLg className="sliderClose" onClick={(e) => handleCloseSlider(e)} size={28} />
                     </div>
-                    <p>
+                    <p className="sliderHeader_desc">
                         You have <strong>{basketItems.length} items</strong> in your basket.
                     </p>
                 </div>
