@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function HeroSlider() {
   const [cats, setCats] = useState([
     { name: "Cat Intro", image: "./src/images/1.png"},
-    // { name: "Testimonial1", image: "./src/images/2.png" },
+    { name: "Testimonial1", image: "./src/images/2.png" },
     // Add more images here Oana
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
