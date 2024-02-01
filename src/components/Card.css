@@ -44,6 +44,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    border-top: 1px dashed black;
+    padding-top: 20px;
 
     button {
         width: 100%;
