@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import "../components/HeroSlider.css";
 import { Link } from 'react-router-dom';
 import CatIntro from '../images/1.png';
-import Testimonail1 from '../images/2.png';
+import Testimonail1 from '../images/ollie.png';
 
 
 function HeroSlider() {
   const [cats, setCats] = useState([
     { name: "Cat Intro", image: CatIntro},
-    { name: "Testimonial1", image: Testimonail1},
+    { name: "Testimonial1", image: Testimonail1}
     // Add more images here Oana
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
