@@ -67,6 +67,7 @@ export default function App() {
     };
 
     const handleAddToBasket = (id, name, price, breed, imgSrc) => {
+        console.log(id);
         // If item is already in the basket
         const itemExists = basketItems.find((item) => item.id === id);
 

@@ -1,40 +1,28 @@
-import { useState, useEffect } from "react";
-import "../components/HeroSlider.css";
-import CatIntro from "../images/1.png";
-import Testimonial from "../images/2.png";
+import "./HeroSlider.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
-function HeroSlider() {
-    // Slider functionality
-    const [imageBool, setImageBool] = useState(true);
+import SlideOne from "../images/1.png";
+import SlideTwo from "../images/2.png";
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setImageBool(!imageBool);
-        }, 10000);
-        return () => clearInterval(interval);
-    }, [imageBool]);
-
+export default function HeroSlider() {
     return (
-        <section id="hero-section">
-            <div className="hero-slider">
-                <div className="slider">
-                    <img className={`slide-one ${imageBool ? "sliderIn" : "sliderOut"}`} src={CatIntro} alt="slide 1" />
-                    <img
-                        className={`slide-two ${imageBool ? "sliderOut" : "sliderIn"}`}
-                        src={Testimonial}
-                        alt="slide 2"
-                    />
-                </div>
-            </div>
+        <section id="heroSlider">
+            <Swiper
+                slidesPerView={1}
+                loop={true}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                modules={[Autoplay]}
+            >
+                <SwiperSlide>
+                    <img className="slider-image" src={SlideOne} alt="Hero Slide One" />
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <img className="slider-image" src={SlideTwo} alt="Hero Slide Two" />
+                </SwiperSlide>
+            </Swiper>
         </section>
     );
 }
-
-export default HeroSlider;
-
-// //Homepage code
-
-// {/*Renders HeroSlider*/}
-// <HeroSlider />
-// {/* Renders CatPage */}
-// <CatPage />
