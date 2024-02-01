@@ -9,7 +9,6 @@ import CheckOut from "./pages/CheckOut";
 import NavBar from "./components/NavBar";
 import AboutUs from "./pages/About";
 import BasketSlider from "./components/BasketSlider";
-import { Card } from "./components/Card";
 
 const apiKey = "live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw";
 
@@ -62,12 +61,6 @@ export default function App() {
                 <Route path="/Checkout" element={<CheckOut />} />
             </Routes>
             {toggleBasket && <BasketSlider toggleBasket={handleToggleBasket} />}
-            <Card
-                imgSrc=""
-                imgAlt="Card Image 1"
-                title="Cat Bio"
-                description="This is the card description section. Insert cat details"
-            />
         </>
     );
 }
