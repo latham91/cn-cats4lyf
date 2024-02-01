@@ -1,12 +1,15 @@
 #navBar {
     background-color: white;
-    padding: 10px;
+    width: 100%;
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 25px;
 }
 
 .logo {
@@ -15,7 +18,7 @@
 }
 
 .logo img {
-    width: 120px;
+    width: 100px;
     transition: font-size 0.3s ease;
 }
 
@@ -24,8 +27,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
+    font-size: 50px;
     text-decoration: none;
+    margin: 0;
 }
 
 .pages {
@@ -38,7 +42,7 @@
 .pages a {
     text-decoration: none;
     color: black;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bolder;
 }
 
