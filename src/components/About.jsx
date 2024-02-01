@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <h4>Cats for Life</h4>
+            <h4> Cats for Life</h4>
             <p>We are here for you and your cats!</p>
             <p>
               Have a question, need assistance, or just want to talk about cats? We're all ears! Contact Cats for Life through the following channels:
