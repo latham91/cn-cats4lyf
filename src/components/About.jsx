@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css'; 
 
 const Footer = () => {
@@ -10,7 +9,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-4">
             <h4>Cats for Life</h4>
-            <p>We're Here for You and Your Cats!</p>
+            <p>We are here for you and your cats!</p>
             <p>
               Have a question, need assistance, or just want to talk about cats? We're all ears! Contact Cats for Life through the following channels:
             </p>
