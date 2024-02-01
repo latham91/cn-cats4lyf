@@ -29,6 +29,12 @@ export default function App() {
                 <Route path="/Checkout" element={<CheckOut />} />
             </Routes>
             {toggleBasket && <BasketSlider toggleBasket={handleToggleBasket} />}
+            <Card
+            imgSrc=""
+            imgAlt="Card Image 1"
+            title="Cat Bio"
+            description="This is the card description section. Insert cat details"
+            />
         </>
     );
 }

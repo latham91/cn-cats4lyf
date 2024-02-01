@@ -25,10 +25,3 @@ export const Card = ({
     </div>
   );
 };
-
-<Card
-imgSrc=""
-imgAlt="Card Image 1"
-title="Cat Bio"
-description="This is the card description section. Insert cat details
-/>
