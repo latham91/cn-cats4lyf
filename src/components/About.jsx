@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Footer.css'; // Your custom styles
+import './Footer.css'; 
 
 const Footer = () => {
   return (
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Additional Information */}
+        
         <div className="row mt-4">
           <div className="col-md-12">
             <h4>Contact Us</h4>
