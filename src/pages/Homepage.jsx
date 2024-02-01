@@ -8,6 +8,7 @@ import { Card } from "../components/Card";
 export default function Homepage({ cats, loading }) {
     return (
         <section id="homepage">
+
             <div className="catsContainer">
                 {!loading ? (
                     cats.map((cat) => (

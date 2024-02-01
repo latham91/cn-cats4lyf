@@ -39,3 +39,11 @@ function HeroSlider() {
 }
 
 export default HeroSlider;
+
+//Homepage code
+
+// {Renders HeroSlider}
+// <HeroSlider />
+// {/* Renders CatPage */}
+// <CatPage />
+
