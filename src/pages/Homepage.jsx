@@ -1,21 +1,28 @@
 import "./Homepage.css";
 import PropTypes from "prop-types";
 
+import HeroSlider from "../components/HeroSlider";
+
 import { Card } from "../components/Card";
 
-export default function Homepage({ cats, loading }) {
+export default function Homepage({ cats, loading, addToBasket }) {
     return (
         <section id="homepage">
+            <HeroSlider />
+            <h2>Check out our amazing cats</h2>
             <div className="catsContainer">
                 {!loading ? (
                     cats.map((cat) => (
                         <Card
                             key={cat.id}
+                            id={cat.id}
+                            name={cat.name}
+                            price={cat.price}
+                            description={cat.description}
+                            breed={cat.breed}
                             imgSrc={cat.url}
-                            imgAlt="image name"
-                            title="Cat Name"
-                            description="lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                            buttonText="Add to Basket"
+                            link={`/Cats/${cat.id}`}
+                            addToBasket={addToBasket}
                         />
                     ))
                 ) : (
@@ -31,4 +38,5 @@ export default function Homepage({ cats, loading }) {
 Homepage.propTypes = {
     cats: PropTypes.array,
     loading: PropTypes.bool,
+    addToBasket: PropTypes.func,
 };

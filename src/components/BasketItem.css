@@ -7,7 +7,9 @@
     margin-bottom: 20px;
 
     img {
-        width: 120px;
+        max-width: 120px;
+        min-width: 120px;
+        object-fit: cover;
     }
 }
 
