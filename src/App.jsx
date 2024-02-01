@@ -14,7 +14,7 @@ import { Card } from "./components/Card";
 const apiKey = "live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw";
 
 export default function App() {
-    const [toggleBasket, setToggleBasket] = useState(true);
+    const [toggleBasket, setToggleBasket] = useState(false);
     const [catData, setCatData] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -23,7 +23,7 @@ export default function App() {
         try {
             setLoading(true);
             const response = await fetch(
-                `https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=${apiKey}`
+                `https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=1&api_key=${apiKey}`
             );
 
             if (!response.ok) {
@@ -54,7 +54,7 @@ export default function App() {
 
     return (
         <>
-            <NavBar />
+            <NavBar toggleBasket={handleToggleBasket} />
             <Routes>
                 <Route path="/" element={<Homepage cats={catData} loading={loading} />} />
                 <Route path="/Cats/:id" element={<CatPage />} />
@@ -63,10 +63,10 @@ export default function App() {
             </Routes>
             {toggleBasket && <BasketSlider toggleBasket={handleToggleBasket} />}
             <Card
-            imgSrc=""
-            imgAlt="Card Image 1"
-            title="Cat Bio"
-            description="This is the card description section. Insert cat details"
+                imgSrc=""
+                imgAlt="Card Image 1"
+                title="Cat Bio"
+                description="This is the card description section. Insert cat details"
             />
         </>
     );

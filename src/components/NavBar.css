@@ -20,17 +20,16 @@
 }
 
 .logo h1 {
-    color:black;
-    display:flex;
+    color: black;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 70px;
     text-decoration: none;
 }
 
-
-.pages{
-    display:flex;
+.pages {
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -52,12 +51,13 @@
     align-items: center;
     color: black;
     gap: 3px;
+    cursor: pointer;
 }
 
 .cart-container_basket p {
     color: white;
     font-weight: bolder;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 20px;
