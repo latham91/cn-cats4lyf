@@ -1,6 +1,8 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { descriptions } from "./utility/FakerData";
+import { faker } from "@faker-js/faker";
 
 // Component Imports
 import Homepage from "./pages/Homepage";
@@ -12,9 +14,8 @@ import BasketSlider from "./components/BasketSlider";
 
 const apiKey = "live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw";
 
-
-
 export default function App() {
+    const [basketItems, setBasketItems] = useState([]);
     const [toggleBasket, setToggleBasket] = useState(false);
     const [catData, setCatData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -33,9 +34,20 @@ export default function App() {
 
             const data = await response.json();
 
-            console.log(data);
+            let tempCatData = [];
 
-            setCatData(data);
+            for (let i = 0; i < data.length; i++) {
+                tempCatData.push({
+                    id: data[i].id,
+                    name: faker.person.firstName(),
+                    price: "£" + Math.floor(faker.commerce.price({ min: 100, max: 1000 })),
+                    description: descriptions[Math.floor(Math.random() * 20)],
+                    breed: data[i].breeds[0].name,
+                    url: data[i].url,
+                });
+            }
+
+            setCatData(tempCatData);
 
             setLoading(false);
         } catch (error) {
@@ -53,11 +65,20 @@ export default function App() {
         setToggleBasket(!toggleBasket);
     };
 
+    const handleAddToBasket = (id, name, price) => {
+        setBasketItems([...basketItems, { id, name, price }]);
+
+        console.log(basketItems);
+    };
+
     return (
         <>
-            <NavBar toggleBasket={handleToggleBasket} />
+            <NavBar toggleBasket={handleToggleBasket} basketItems={basketItems} />
             <Routes>
-                <Route path="/" element={<Homepage cats={catData} loading={loading} />} />
+                <Route
+                    path="/"
+                    element={<Homepage cats={catData} loading={loading} addToBasket={handleAddToBasket} />}
+                />
                 <Route path="/Cats/:id" element={<CatPage />} />
                 <Route path="/About" element={<AboutUs />} />
                 <Route path="/Checkout" element={<CheckOut />} />
