@@ -1,3 +1,11 @@
+#homepage {
+    h2 {
+        text-align: center;
+        margin: 35px 0;
+        font-size: 35px;
+    }
+}
+
 .catsContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

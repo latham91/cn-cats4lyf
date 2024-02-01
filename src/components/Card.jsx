@@ -17,7 +17,7 @@ export const Card = ({ id, imgSrc, link, description, breed, name, price, addToB
 
                 <div className="card-actions">
                     <button onClick={() => addToBasket(id, name, price, breed, imgSrc)}>Add to Basket</button>
-                    <span>{price}</span>
+                    <span>£{price}</span>
                 </div>
             </div>
         </div>
@@ -31,6 +31,6 @@ Card.propTypes = {
     breed: PropTypes.string,
     addToBasket: PropTypes.func,
     name: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.number,
     description: PropTypes.string,
 };

@@ -1,44 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import "../components/HeroSlider.css";
-import { Link } from 'react-router-dom';
-import CatIntro from '../images/1.png';
-import Testimonail1 from '../images/2.png';
-
+import CatIntro from "../images/1.png";
+import Testimonial from "../images/2.png";
 
 function HeroSlider() {
-  const [cats, setCats] = useState([
-    { name: "Cat Intro", image: CatIntro},
-    { name: "Testimonial1", image: Testimonail1},
-    // Add more images here Oana
-  ]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+    // Slider functionality
+    const [imageBool, setImageBool] = useState(true);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % cats.length);
-    }, 3000); // Changes image every 3 seconds 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setImageBool(!imageBool);
+        }, 10000);
+        return () => clearInterval(interval);
+    }, [imageBool]);
 
-    return () => clearInterval(interval);
-  }, [cats.length]);
-
-  return (
-    <div className="hero-slider">
-      <h2>ADOPT A CAT 4 LYF</h2>
-      <div className="slider">
-        {cats.map((cat, index) => (
-          <div
-            className={`slide ${index === currentIndex ? 'active' : ''}`}
-            key={index}
-          >
-            <img src={cat.image} alt={cat.name} />
-            <Link to="/CatPage">
-              <button>Adopt Now</button>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <section id="hero-section">
+            <div className="hero-slider">
+                <div className="slider">
+                    <img className={`slide-one ${imageBool ? "sliderIn" : "sliderOut"}`} src={CatIntro} alt="slide 1" />
+                    <img
+                        className={`slide-two ${imageBool ? "sliderOut" : "sliderIn"}`}
+                        src={Testimonial}
+                        alt="slide 2"
+                    />
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default HeroSlider;
@@ -49,4 +38,3 @@ export default HeroSlider;
 // <HeroSlider />
 // {/* Renders CatPage */}
 // <CatPage />
-
