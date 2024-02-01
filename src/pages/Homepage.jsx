@@ -1,5 +1,6 @@
 import "./Homepage.css";
 import PropTypes from "prop-types";
+
 import HeroSlider from "../components/HeroSlider";
 
 import { Card } from "../components/Card";
@@ -7,8 +8,8 @@ import { Card } from "../components/Card";
 export default function Homepage({ cats, loading, addToBasket }) {
     return (
         <section id="homepage">
-            {/*Renders HeroSlider*/}
-<HeroSlider />
+            <HeroSlider />
+            <h2>Check out our amazing cats</h2>
             <div className="catsContainer">
                 {!loading ? (
                     cats.map((cat) => (

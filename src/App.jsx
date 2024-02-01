@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { descriptions } from "./utility/FakerData";
 import { faker } from "@faker-js/faker";
 
@@ -19,6 +19,7 @@ export default function App() {
     const [toggleBasket, setToggleBasket] = useState(false);
     const [catData, setCatData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [basketTotal, setBasketTotal] = useState(0);
 
     // Fetch the cat data from the API.
     const fetchData = async () => {
@@ -40,7 +41,7 @@ export default function App() {
                 tempCatData.push({
                     id: data[i].id,
                     name: faker.person.firstName(),
-                    price: "£" + Math.floor(faker.commerce.price({ min: 100, max: 1000 })),
+                    price: Math.floor(faker.commerce.price({ min: 100, max: 1000 })),
                     description: descriptions[Math.floor(Math.random() * 20)],
                     breed: data[i].breeds[0].name,
                     url: data[i].url,
@@ -66,9 +67,69 @@ export default function App() {
     };
 
     const handleAddToBasket = (id, name, price, breed, imgSrc) => {
-        setBasketItems([...basketItems, { id, name, price, breed, url: imgSrc }]);
+        // If item is already in the basket
+        const itemExists = basketItems.find((item) => item.id === id);
 
-        console.log(basketItems);
+        // If the item is not in the basket, add it to the basket.
+        if (!itemExists) {
+            const newItem = {
+                id,
+                name,
+                price,
+                breed,
+                url: imgSrc,
+                quantity: 1,
+            };
+
+            setBasketItems([...basketItems, newItem]);
+        } else {
+            // If the item is already in the basket, increase the quantity by 1.
+            const newBasket = basketItems.map((item) => {
+                if (item.id === id) {
+                    return {
+                        ...item,
+                        quantity: item.quantity + 1,
+                    };
+                }
+                return item;
+            });
+
+            setBasketItems(newBasket);
+        }
+    };
+
+    const handleDeleteFromBasket = (id) => {
+        const newBasket = basketItems.filter((item) => item.id !== id);
+
+        setBasketItems(newBasket);
+    };
+
+    const calculateTotal = useCallback(() => {
+        let total = 0;
+
+        basketItems.forEach((item) => {
+            total += item.price * item.quantity;
+
+            setBasketTotal(total);
+        });
+    }, [basketItems]);
+
+    useEffect(() => {
+        calculateTotal();
+    }, [basketItems, calculateTotal]);
+
+    const changeQuantity = (id, quantity) => {
+        const newBasket = basketItems.map((item) => {
+            if (item.id === id) {
+                return {
+                    ...item,
+                    quantity: parseInt(quantity),
+                };
+            }
+            return item;
+        });
+
+        setBasketItems(newBasket);
     };
 
     return (
@@ -83,7 +144,15 @@ export default function App() {
                 <Route path="/About" element={<AboutUs />} />
                 <Route path="/Checkout" element={<CheckOut />} />
             </Routes>
-            {toggleBasket && <BasketSlider toggleBasket={handleToggleBasket} basketItems={basketItems} />}
+            {toggleBasket && (
+                <BasketSlider
+                    toggleBasket={handleToggleBasket}
+                    basketItems={basketItems}
+                    deleteFromBasket={handleDeleteFromBasket}
+                    basketTotal={basketTotal}
+                    changeQuantity={changeQuantity}
+                />
+            )}
         </>
     );
 }

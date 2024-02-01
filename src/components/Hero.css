@@ -1,0 +1,26 @@
+/* Hero.css */
+.hero-container {
+    background-image: url("path/to/your/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust the height based on your needs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+/* Customize button styling as needed */
+.btn-primary {
+    background-color: #ffc107;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}

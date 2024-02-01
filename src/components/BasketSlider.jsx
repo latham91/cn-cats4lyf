@@ -6,7 +6,7 @@ import { useState, useRef } from "react";
 // Component Imports
 import BasketItem from "./BasketItem";
 
-export default function BasketSlider({ toggleBasket, basketItems }) {
+export default function BasketSlider({ toggleBasket, basketItems, deleteFromBasket, basketTotal, changeQuantity }) {
     const [slideIn, setSlideIn] = useState(false);
     const sliderBg = useRef();
 
@@ -42,13 +42,16 @@ export default function BasketSlider({ toggleBasket, basketItems }) {
                             breed={item.breed}
                             price={item.price}
                             url={item.url}
+                            quantity={item.quantity}
+                            deleteFromBasket={deleteFromBasket}
+                            changeQuantity={changeQuantity}
                         />
                     ))}
                 </div>
                 <div className="sliderFooter">
                     <p className="sliderFooter_total">
                         <strong>Total: </strong>
-                        <span>£0.00</span>
+                        <span>{basketItems.length === 0 ? "£0.00" : `£${basketTotal}`}</span>
                     </p>
                     <button className="sliderFooter_button">Checkout</button>
                 </div>
@@ -60,4 +63,7 @@ export default function BasketSlider({ toggleBasket, basketItems }) {
 BasketSlider.propTypes = {
     toggleBasket: PropTypes.func.isRequired,
     basketItems: PropTypes.array.isRequired,
+    deleteFromBasket: PropTypes.func.isRequired,
+    basketTotal: PropTypes.number,
+    changeQuantity: PropTypes.func.isRequired,
 };
