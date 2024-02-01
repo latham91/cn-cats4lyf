@@ -16,7 +16,7 @@ export const Card = ({ id, imgSrc, link, description, breed, name, price, addToB
                 <p>{description}</p>
 
                 <div className="card-actions">
-                    <button onClick={() => addToBasket(id, name, price)}>Add to Basket</button>
+                    <button onClick={() => addToBasket(id, name, price, breed, imgSrc)}>Add to Basket</button>
                     <span>{price}</span>
                 </div>
             </div>

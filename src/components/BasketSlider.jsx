@@ -6,7 +6,7 @@ import { useState, useRef } from "react";
 // Component Imports
 import BasketItem from "./BasketItem";
 
-export default function BasketSlider({ toggleBasket }) {
+export default function BasketSlider({ toggleBasket, basketItems }) {
     const [slideIn, setSlideIn] = useState(false);
     const sliderBg = useRef();
 
@@ -30,11 +30,20 @@ export default function BasketSlider({ toggleBasket }) {
                         <BsXLg className="sliderClose" onClick={(e) => handleCloseSlider(e)} size={28} />
                     </div>
                     <p>
-                        You have <strong>0 items</strong> in your basket.
+                        You have <strong>{basketItems.length} items</strong> in your basket.
                     </p>
                 </div>
                 <div className="sliderItems">
-                    <BasketItem />
+                    {basketItems.map((item) => (
+                        <BasketItem
+                            key={item.id}
+                            id={item.id}
+                            name={item.name}
+                            breed={item.breed}
+                            price={item.price}
+                            url={item.url}
+                        />
+                    ))}
                 </div>
                 <div className="sliderFooter">
                     <p className="sliderFooter_total">
@@ -50,4 +59,5 @@ export default function BasketSlider({ toggleBasket }) {
 
 BasketSlider.propTypes = {
     toggleBasket: PropTypes.func.isRequired,
+    basketItems: PropTypes.array.isRequired,
 };
