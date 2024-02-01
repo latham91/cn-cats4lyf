@@ -1,7 +1,7 @@
 import "./Homepage.css";
 import PropTypes from "prop-types";
 
-export default function Homepage({ cats, loading }) {
+export default function Homepage() {
     return <section id="homepage"></section>;
 }
 
