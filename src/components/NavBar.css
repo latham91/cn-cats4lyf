@@ -43,10 +43,6 @@
     font-weight: bolder;
 }
 
-.pages a:hover {
-    text-decoration: underline;
-}
-
 .cart-container_basket {
     display: flex;
     align-items: center;
