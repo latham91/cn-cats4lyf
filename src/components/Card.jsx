@@ -5,8 +5,7 @@ import { fakerData, descriptions } from "../utility/FakerData";
 
 export const Card = ({ imgSrc, link, breed }) => {
     const catCardData = fakerData();
-
-    const description = descriptions[Math.floor(Math.random() * 20)];
+    const description = descriptions[Math.floor(Math.random()*20)]
 
     return (
         <div className="card-container">
