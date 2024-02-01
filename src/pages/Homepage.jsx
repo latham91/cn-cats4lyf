@@ -8,6 +8,8 @@ import { Card } from "../components/Card";
 export default function Homepage({ cats, loading }) {
     return (
         <section id="homepage">
+{/*Renders HeroSlider*/}
+<HeroSlider />
 
             <div className="catsContainer">
                 {!loading ? (

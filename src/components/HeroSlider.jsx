@@ -42,7 +42,7 @@ export default HeroSlider;
 
 //Homepage code
 
-// {Renders HeroSlider}
+// {/*Renders HeroSlider*/}
 // <HeroSlider />
 // {/* Renders CatPage */}
 // <CatPage />
