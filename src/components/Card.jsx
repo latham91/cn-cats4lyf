@@ -1,23 +1,30 @@
 import PropTypes from "prop-types";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import { fakerData, descriptions } from "../utility/FakerData"
 
-export const Card = ({ imgSrc, title, description, link }) => {
+export const Card = ({ imgSrc, link, breed }) => {
+
+    const catCardData = fakerData()
+
+    const description = descriptions[Math.floor(Math.random()*20)]
+    console.log(description)
+
     return (
         <div className="card-container">
             <Link to={link}>
                 <div className="card-image-container">
-                    <img src={imgSrc} alt={title + "image"} />
-                    <span className="card-breed">British Shorthair</span>
+                    <img src={imgSrc} alt={catCardData.name + "image"} />
+                    <span className="card-breed">{breed}</span>
                 </div>
             </Link>
             <div className="card-content">
-                <h3>{title}</h3>
+                <h3>{catCardData.name}</h3>
                 <p>{description}</p>
 
                 <div className="card-actions">
                     <button>Add to Basket</button>
-                    <span>$99.00</span>
+                    <span>{catCardData.price}</span>
                 </div>
             </div>
         </div>
@@ -26,8 +33,6 @@ export const Card = ({ imgSrc, title, description, link }) => {
 
 Card.propTypes = {
     imgSrc: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    buttonText: PropTypes.string,
     link: PropTypes.string,
+    breed: PropTypes.string,
 };
