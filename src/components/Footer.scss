@@ -1,0 +1,32 @@
+.footer {
+  background-color: var(--cui-tertiary-bg);
+  color: var(--cui-body-color);
+  padding: var(--footer-padding-y) var(--footer-padding-x);
+  border-top: var(--footer-border-width) solid var(--footer-border-color);
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

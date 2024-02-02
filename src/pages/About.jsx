@@ -1,7 +1,7 @@
 import React from 'react';
-// import Image1 from '..images/team.png';
-// import Image2 from "../images/welcome.png";
 
+// import Image1 from '../src/images/team.png';
+// import Image2 from '../src/images/welcome.png';
 
 
 const AboutUs = () => {
@@ -14,9 +14,10 @@ const AboutUs = () => {
         <footer className="bg-dark text-light">
             <div className="container" style={containerStyle}> {}
             <div className="col-md-12">
-                        {/* <img src={Image2} alt="Image2" />
-                        <img src={Image1} alt="Image1" /> */}
-
+        
+                    {/* <img src={team} alt="Image1" />
+                    <img src={welcome} alt="Image2" /> */}
+             
                 <h4>Cats4Lyf! We are here for you and your cats!</h4>
                     <div className="col-md-4">
                         

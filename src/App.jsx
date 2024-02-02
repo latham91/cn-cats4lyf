@@ -14,6 +14,7 @@ import NavBar from "./components/NavBar";
 import AboutUs from "./pages/About";
 import BasketSlider from "./components/BasketSlider";
 
+
 const apiKey = "live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw";
 
 export default function App() {
@@ -76,7 +77,7 @@ export default function App() {
         // If item is already in the basket
         const itemExists = basketItems.find((item) => item.id === id);
 
-        // If the item is not in the basket, add it to the basket.
+        // If the item is not in the basket, add it to the basket.0
         if (!itemExists) {
             const newItem = {
                 id,
