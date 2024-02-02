@@ -47,7 +47,7 @@ const Checkout = ({basketItems, basketTotal}) => {
            
         ))}
     </div>
-        <div>
+        <div className="total">
             Total: £{basketTotal}
         </div>
       <form onSubmit={handleSubmit}>
