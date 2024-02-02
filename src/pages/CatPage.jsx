@@ -1,3 +1,7 @@
 export default function CatPage() {
-    return <div>CatPage</div>;
+    return (
+        <div>
+            <h1>CatPage</h1>
+        </div>
+    );
 }

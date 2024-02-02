@@ -1,25 +1,41 @@
 import "./BasketItem.css";
-
+import PropTypes from "prop-types";
 import { FaRegTrashCan } from "react-icons/fa6";
 
-export default function BasketItem() {
+export default function BasketItem({ id, name, breed, price, url, deleteFromBasket, quantity, changeQuantity }) {
     return (
         <div className="basketItem">
-            <img src="https://via.placeholder.com/120x120" alt="placeholder image" draggable={false} />
+            <img src={url} alt="placeholder image" draggable={false} />
             <div className="basketItem_content">
                 <div className="basketItem_product_name">
-                    <h4>Product Name</h4>
-                    <FaRegTrashCan size={20} className="trashIcon" />
+                    <h4>{name}</h4>
+                    <FaRegTrashCan onClick={() => deleteFromBasket(id)} size={20} className="trashIcon" />
                 </div>
-                <span>SKU ID: 001</span>
+                <span>BREED: {breed}</span>
                 <div className="basketItem_details">
-                    <span className="basketItems_details_price">£0.00</span>
+                    <span className="basketItems_details_price">£{price}</span>
                     <div className="qty">
                         <span>Qty:</span>
-                        <input type="number" min={1} defaultValue={1} />
+                        <input
+                            onChange={(e) => changeQuantity(id, e.target.value)}
+                            type="number"
+                            min={1}
+                            defaultValue={quantity}
+                        />
                     </div>
                 </div>
             </div>
         </div>
     );
 }
+
+BasketItem.propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
+    breed: PropTypes.string,
+    price: PropTypes.number,
+    url: PropTypes.string,
+    quantity: PropTypes.number,
+    deleteFromBasket: PropTypes.func,
+    changeQuantity: PropTypes.func,
+};

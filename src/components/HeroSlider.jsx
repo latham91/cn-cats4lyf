@@ -1,36 +1,28 @@
-import React, { useState, useEffect } from "react";
-import CatIntro from "../images/1.png";
-import AdoptCats from "../images/2.png";
-import "../components/HeroSlider.css";
+import "./HeroSlider.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
-function HeroSlider() {
-  const [imageIndex, setImageIndex] = useState(0);
+import SlideOne from "../images/1.png";
+import SlideTwo from "../images/2.png";
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
-    }, 10000); // Change image every 10 seconds
-    return () => clearInterval(interval);
-  }, []);
+export default function HeroSlider() {
+    return (
+        <section id="heroSlider">
+            <Swiper
+                slidesPerView={1}
+                loop={true}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                modules={[Autoplay]}
+            >
+                <SwiperSlide>
+                    <img className="slider-image" src={SlideOne} alt="Hero Slide One" />
+                </SwiperSlide>
 
-  return (
-    <section id="hero-section">
-      <div className="hero-slider">
-        <div className="slider">
-          <img
-            className={`slide ${imageIndex === 0 ? "sliderIn" : "sliderOut"}`}
-            src={CatIntro}
-            alt="slide 1"
-          />
-          <img
-            className={`slide ${imageIndex === 1 ? "sliderIn" : "sliderOut"}`}
-            src={AdoptCats}
-            alt="slide 2"
-          />
-        </div>
-      </div>
-    </section>
-  );
+                <SwiperSlide>
+                    <img className="slider-image" src={SlideTwo} alt="Hero Slide Two" />
+                </SwiperSlide>
+            </Swiper>
+        </section>
+    );
 }
-
-export default HeroSlider;

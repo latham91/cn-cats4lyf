@@ -1,15 +1,15 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 import './Footer.css'; 
 
-const Footer = () => {
+const About = () => {
   return (
-    <footer className="footer">
+    <footer className="bg-dark text-light">
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <h4>Cats for Life</h4>
-            <p>We're Here for You and Your Cats!</p>
+            <h4> Cats for Life</h4>
+            <p>We are here for you and your cats!</p>
             <p>
               Have a question, need assistance, or just want to talk about cats? We're all ears! Contact Cats for Life through the following channels:
             </p>
@@ -46,8 +46,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Additional Information Section */}
-        <div className="row mt-4 additional-info">
+        
+        <div className="row mt-4">
           <div className="col-md-12">
             <h4>Contact Us</h4>
             <p>We're Here for You and Your Cats!</p>
@@ -70,7 +70,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
-
-
-
+export default About;
