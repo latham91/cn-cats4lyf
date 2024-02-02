@@ -1,24 +1,25 @@
 .footer-container {
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  color: black;
-  padding: 10px;
-  text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
 }
 
 .social-media-section {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .social-media-section a {
-  text-decoration: none;
-  color: #333; /* Replace with your preferred text color */
-  font-weight: bold;
+    text-decoration: none;
+    color: #333; /* Replace with your preferred text color */
+    font-weight: bold;
 }
 
 .social-media-section a:hover {
-  color: #007bff; /* Replace with your preferred hover color */
+    color: #007bff; /* Replace with your preferred hover color */
 }

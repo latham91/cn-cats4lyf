@@ -11,6 +11,10 @@ export default function Homepage({ cats, loading, addToBasket }) {
             <HeroSlider />
             <h2>Check out our amazing cats</h2>
             <div className="catsContainer">
+                {/* If loading state is false then map through the cats data and display the Card component
+                    for each cat. If the loading state is true, display a loading text.
+                    cats is the state that holds the data in App.jsx
+                */}
                 {!loading ? (
                     cats.map((cat) => (
                         <Card
@@ -23,7 +27,7 @@ export default function Homepage({ cats, loading, addToBasket }) {
                             sex={cat.sex}
                             imgSrc={cat.url}
                             link={`/Cats/${cat.id}`}
-                            addToBasket={addToBasket}
+                            addToBasket={addToBasket} // This is the function to add an item to the basket
                         />
                     ))
                 ) : (
@@ -36,6 +40,7 @@ export default function Homepage({ cats, loading, addToBasket }) {
     );
 }
 
+// These are prop types to ensure that the correct data types are passed to the component.
 Homepage.propTypes = {
     cats: PropTypes.array,
     loading: PropTypes.bool,
