@@ -5,6 +5,8 @@ import { useState, useRef } from "react";
 
 // Component Imports
 import BasketItem from "./BasketItem";
+import { Link } from "react-router-dom";
+import CheckOut from "../pages/CheckOut";
 
 export default function BasketSlider({ toggleBasket, basketItems, deleteFromBasket, basketTotal, changeQuantity }) {
     const [slideIn, setSlideIn] = useState(false);
@@ -53,7 +55,9 @@ export default function BasketSlider({ toggleBasket, basketItems, deleteFromBask
                         <strong>Total: </strong>
                         <span>{basketItems.length === 0 ? "£0.00" : `£${basketTotal}`}</span>
                     </p>
-                    <button className="sliderFooter_button">Checkout</button>
+                    <Link to="/checkout">
+                        <button className="sliderFooter_button" onClick={toggleBasket}>Checkout</button>
+                    </Link>
                 </div>
             </div>
         </div>
