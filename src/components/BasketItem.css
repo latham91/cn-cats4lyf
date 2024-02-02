@@ -2,7 +2,7 @@
 .basketItem {
     display: flex;
     border: 1px solid black;
-    height: 100px;
+    height: 120px;
     overflow: hidden;
     margin-bottom: 20px;
 
@@ -34,7 +34,7 @@
         align-items: center;
 
         h4 {
-            font-size: 18px;
+            font-size: 22px;
         }
 
         .trashIcon {
@@ -58,12 +58,12 @@
     align-items: center;
 
     .basketItems_details_price {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .qty {
         span {
-            font-size: 16px;
+            font-size: 18px;
             margin-right: 10px;
         }
     }

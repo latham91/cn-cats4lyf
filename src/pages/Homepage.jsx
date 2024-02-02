@@ -20,6 +20,7 @@ export default function Homepage({ cats, loading, addToBasket }) {
                             price={cat.price}
                             description={cat.description}
                             breed={cat.breed}
+                            sex={cat.sex}
                             imgSrc={cat.url}
                             link={`/Cats/${cat.id}`}
                             addToBasket={addToBasket}

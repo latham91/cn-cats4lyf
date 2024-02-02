@@ -26,7 +26,7 @@ export default function App() {
         try {
             setLoading(true);
             const response = await fetch(
-                `https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=1&api_key=${apiKey}`
+                `https://api.thecatapi.com/v1/images/search?limit=21&has_breeds=1&api_key=${apiKey}`
             );
 
             if (!response.ok) {
@@ -44,6 +44,7 @@ export default function App() {
                     price: Math.floor(faker.commerce.price({ min: 100, max: 1000 })),
                     description: descriptions[Math.floor(Math.random() * 20)],
                     breed: data[i].breeds[0].name,
+                    sex: faker.person.sex(),
                     url: data[i].url,
                 });
             }
@@ -67,6 +68,7 @@ export default function App() {
     };
 
     const handleAddToBasket = (id, name, price, breed, imgSrc) => {
+        console.log(id);
         // If item is already in the basket
         const itemExists = basketItems.find((item) => item.id === id);
 

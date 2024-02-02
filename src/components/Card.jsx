@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import { BsGenderFemale, BsGenderMale } from "react-icons/bs";
 
-export const Card = ({ id, imgSrc, link, description, breed, name, price, addToBasket }) => {
+export const Card = ({ id, imgSrc, link, description, breed, name, price, addToBasket, sex }) => {
     return (
         <div className="card-container">
             <Link to={link}>
@@ -12,7 +13,10 @@ export const Card = ({ id, imgSrc, link, description, breed, name, price, addToB
                 </div>
             </Link>
             <div className="card-content">
-                <h3>{name}</h3>
+                <div className="card-content-title">
+                    <h3>{name}</h3>
+                    {sex === "male" ? <BsGenderMale size={34} /> : <BsGenderFemale size={34} />}
+                </div>
                 <p>{description}</p>
 
                 <div className="card-actions">
@@ -31,6 +35,7 @@ Card.propTypes = {
     breed: PropTypes.string,
     addToBasket: PropTypes.func,
     name: PropTypes.string,
+    sex: PropTypes.string,
     price: PropTypes.number,
     description: PropTypes.string,
 };
