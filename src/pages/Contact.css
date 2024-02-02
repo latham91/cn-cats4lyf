@@ -5,13 +5,13 @@ h1 {
     font-size: 3em;
 }
 
-footer {
-        text-align: center;
-        border-bottom: 1px solid white;
-        color: white;
-        padding-bottom: 15px;
-        max-width: 70%;
-        margin: 0 auto;
+.contentWrapper {
+    text-align: center;
+    border-bottom: 1px solid white;
+    color: white;
+    padding-bottom: 15px;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 main {
@@ -20,12 +20,15 @@ main {
     }
 }
 
-footer {
+.contentWrapper {
     h4 {
     text-align: center;
     color: white;
     padding-bottom: 15px;
     font-size: 2em;
     }
-    
+    ul {
+        list-style-type: none;
+    }
 }
+

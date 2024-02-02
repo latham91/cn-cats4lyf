@@ -2,7 +2,7 @@ import "./Contact.css";
 
 const ContactUs = () => {
     return (
-        <footer className="bg-dark text-light">
+        <section className="contentWrapper">
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
@@ -107,7 +107,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
     );
 };
 
