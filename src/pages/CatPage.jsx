@@ -1,37 +1,47 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import PropTypes from "prop-types";
+// id: data[i].id,
+// name: faker.person.firstName(),
+// price: Math.floor(faker.commerce.price({ min: 100, max: 1000 })),
+// description: descriptions[Math.floor(Math.random() * 20)],
+// breed: data[i].breeds[0].name,
+// sex: faker.person.sex(),
+// url: data[i].url,
 
-export default function CatPage({ catData }) {
-    const [singleCatData, setSingleCatData] = useState({});
-    const [notFound, setNotFound] = useState(false);
+// breedDescription: data[i].breeds[0].description,
+// temperament: data[i].breeds[0].temperament,
+// origin: data[i].breeds[0].origin,
+// life_span: data[i].breeds[0].life_span,
+// wikipedia_url: data[i].breeds[0].wikipedia_url,
+// indoor: data[i].breeds[0].indoor,
+// weight: data[i].breeds[0].weight.metric,
+// rare: data[i].breeds[0].rare
+
+export default function CatPage({ cat }) {
+    const [singleCatData, setSingleCatData] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     const { id } = useParams();
-    const singleCat = catData.find((cat) => cat.id === id);
 
-    useEffect(() => {
-        setNotFound(true);
+    const singleCat = cat.filter((item) => {
+        return item.id === id;
+    });
 
-        if (singleCat) {
-            setSingleCatData(singleCat);
-            setNotFound(false);
-        }
-    }, [singleCat]);
+    console.log(singleCat);
 
-    return (
-        <div>
-            {notFound ? (
-                <h1>Cat not found.</h1>
-            ) : (
-                <div>
-                    <h1>{singleCatData.name}</h1>
-                    <img src={singleCatData.url} alt={singleCatData.name} />
-                    <p>{singleCatData.description}</p>
-                </div>
-            )}
-        </div>
-    );
+    if (!cat) {
+        return <div>Loading...</div>;
+    } else {
+        return (
+            <section id="cat-page">
+                <p>{singleCat.name}</p>
+            </section>
+        );
+    }
+
+    console.log(singleCat);
+    console.log(singleCat.name);
 }
 
 CatPage.propTypes = {
