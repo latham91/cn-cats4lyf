@@ -32,6 +32,7 @@ export default function App() {
             setLoading(true);
             const response = await fetch(
                 `https://api.thecatapi.com/v1/images/search?limit=21&has_breeds=1&api_key=${apiKey}`
+
             );
 
             if (!response.ok) {
