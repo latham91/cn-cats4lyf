@@ -15,11 +15,17 @@ export const Card = ({ id, imgSrc, link, description, breed, name, price, addToB
             <div className="card-content">
                 <div className="card-content-title">
                     <h3>{name}</h3>
+                    {/* If the sex is male show the male gender icon
+                        if the sex is female show the female gender icon
+                    */}
                     {sex === "male" ? <BsGenderMale size={34} /> : <BsGenderFemale size={34} />}
                 </div>
                 <p>{description}</p>
 
                 <div className="card-actions">
+                    {/* This function uses the addToBasket function to send back the
+                        id, name, price, breed and imageSrc to the parent component.
+                    */}
                     <button onClick={() => addToBasket(id, name, price, breed, imgSrc)}>Add to Basket</button>
                     <span>£{price}</span>
                 </div>
@@ -28,6 +34,7 @@ export const Card = ({ id, imgSrc, link, description, breed, name, price, addToB
     );
 };
 
+// These are prop types to ensure that the correct data types are passed to the component.
 Card.propTypes = {
     id: PropTypes.string,
     imgSrc: PropTypes.string,
