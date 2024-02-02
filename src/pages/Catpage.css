@@ -1,3 +1,41 @@
 #cat-page {
     color: white;
+    height: 82vh;
+}
+
+.errorPage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    font-size: 40px;
+    font-weight: bolder;
+
+    a {
+        color: white;
+    }
+}
+
+.cat-page-container {
+    margin-top: 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+
+    .cat-page-left {
+        flex: 1;
+
+        img {
+            max-width: 600px;
+        }
+    }
+
+    .cat-page-right {
+        h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+    }
 }

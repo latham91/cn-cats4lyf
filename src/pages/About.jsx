@@ -1,116 +1,73 @@
+import "./About.css";
+
 const AboutUs = () => {
-    // Aaron Latham - Basket Functionality
-    // Ethan Rose - Card Component and Checkout Page
-    // Tofeeq Majeed - Navbar and Individual Cat Page
-    // Oana Lupascu - About and Footer
-
     return (
-        <footer className="bg-dark text-light">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-4">
-                        <h4> Cats for Life</h4>
-                        <p>We are here for you and your cats!</p>
-                        <p>
-                            Have a question, need assistance, or just want to talk about cats? We&apos;re all ears!
-                            Contact Cats for Life through the following channels:
-                        </p>
-                        <div>
-                            <strong>Customer Support:</strong>
-                            <ul>
-                                <li>
-                                    Email: <a href="mailto:support@cats4lyf.com">support@cats4lyf.com</a>
-                                </li>
-                                <li>Phone: 01612453651</li>
-                            </ul>
-                            <strong>Visit Us:</strong>
-                            <p>
-                                Cats for Life Headquarters
-                                <br />2 Dale Street, Manchester, M3 5RD
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <h4>Connect With Us Online</h4>
-                        <p>
-                            Stay updated on the latest cat news, promotions, and community events by following us on
-                            social media:
-                        </p>
-                        <ul>
-                            <li>
-                                Facebook:{" "}
-                                <a href="https://facebook.com/cats4lyf" target="_blank" rel="noopener noreferrer">
-                                    facebook.com/cats4lyf
-                                </a>
-                            </li>
-                            <li>
-                                Instagram:{" "}
-                                <a href="https://instagram.com/cats4lyf" target="_blank" rel="noopener noreferrer">
-                                    instagram.com/cats4lyf
-                                </a>
-                            </li>
-                            <li>
-                                Twitter:{" "}
-                                <a href="https://twitter.com/cats4lyf" target="_blank" rel="noopener noreferrer">
-                                    twitter.com/cats4lyf
-                                </a>
-                            </li>
-                        </ul>
-                        <p>
-                            <strong>Got Feedback?</strong> We value your feedback! Share your thoughts, suggestions, or
-                            experiences to help us improve and better serve you. Email us at{" "}
-                            <a href="mailto:feedback@cats4lyf.com">feedback@cats4lyf.com</a>.
-                        </p>
-                    </div>
-                    <div className="col-md-4">
-                        <h4>Business Inquiries</h4>
-                        <p>
-                            For business partnerships, collaborations, or wholesale inquiries, please reach out to our
-                            team at <a href="mailto:partnerships@cats4lyfe.com">partnerships@cats4lyfe.com</a>.
-                        </p>
-                        <h4>Join Our Community</h4>
-                        <p>
-                            Become a part of the Cats for Life community by joining our forums, participating in events,
-                            and sharing your cat stories. We love hearing from fellow cat enthusiasts!
-                        </p>
-                        <h4>Operating Hours</h4>
-                        <p>Our customer support team is available to assist you during the following hours:</p>
-                        <p>
-                            <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM (Your Time Zone)
-                        </p>
-                        <p>
-                            <strong>Saturday - Sunday:</strong> Closed
-                        </p>
-                        <p>We strive to respond to all inquiries within 24 hours.</p>
-                    </div>
-                </div>
+        <div className="aboutWrapper">
+            <header>
+                <h1>About Us</h1>
+            </header>
 
-                <div className="row mt-4">
-                    <div className="col-md-12">
-                        <h4>Contact Us</h4>
-                        <p>We&apos;re Here for You and Your Cats!</p>
-                        <p>
-                            Have a question, need assistance, or just want to talk about cats? We&apos;re all ears!
-                            Contact Cats for Life through the following channels:
-                        </p>
-                        <div>
-                            <strong>Customer Support:</strong>
-                            <ul>
-                                <li>
-                                    Email: <a href="mailto:support@cats4lyf.com">support@cats4lyf.com</a>
-                                </li>
-                                <li>Phone: 01612453651</li>
-                            </ul>
-                            <strong>Visit Us:</strong>
-                            <p>
-                                Cats for Life Headquarters
-                                <br />2 Dale Street, Manchester, M3 5RD
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+            <main>
+                <section>
+                    <h2>What We Do</h2>
+                    <p>
+                        Welcome to Cats for Life, where our passion for feline companionship drives everything we do. At
+                        Cats for Life, we are dedicated to connecting cat enthusiasts with their purr-fect companions.
+                        Our mission goes beyond just selling cats; it&apos;s about fostering lifelong relationships
+                        between humans and their furry friends.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Curating Quality Connections</h2>
+                    <p>
+                        We meticulously curate a selection of cats from reputable breeders and shelters, ensuring that
+                        each feline friend we offer is healthy, well-socialised, and ready to bring joy to your home.
+                        Our commitment to ethical practices and responsible breeding sets us apart in the industry.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Matchmaking Made Easy</h2>
+                    <p>
+                        Finding the right cat to join your family is a personal journey, and we&apos;re here to make it
+                        seamless. Our knowledgeable team provides personalised assistance, helping you navigate through
+                        various breeds, temperaments, and lifestyles to find the perfect match for your unique
+                        preferences.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Lifelong Support</h2>
+                    <p>
+                        Our commitment to your feline companionship doesn&apos;t end at the point of sale. Cats for Life
+                        offers ongoing support and resources to ensure a happy and healthy life for your new friend.
+                        From dietary advice to behavioral tips, we&apos;re dedicated to being your go-to source for all
+                        things cat-related.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Community Building</h2>
+                    <p>
+                        Cats for Life is more than a marketplace; it&apos;s a community of cat lovers. Join our forums,
+                        participate in events, and share your feline adventures with like-minded individuals. We believe
+                        that building a supportive community enhances the joy of having cats in our lives.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Giving Back</h2>
+                    <p>
+                        We understand the importance of giving back to our feline friends in need. Cats for Life is
+                        actively involved in charitable initiatives, supporting animal shelters and rescue
+                        organisations. When you choose Cats for Life, you&apos;re not just bringing home a cat, you are
+                        contributing to a cause that helps cats find loving homes. Join us at Cats for Life, where every
+                        purr-chase makes a difference. Your journey to a lifetime of cat companionship begins here.
+                    </p>
+                </section>
+            </main>
+        </div>
     );
 };
 
