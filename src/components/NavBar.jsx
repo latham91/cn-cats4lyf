@@ -16,9 +16,11 @@ export default function NavBar({ toggleBasket, basketItems }) {
                     </div>
                 </Link>
                 <div className="pages">
-                    {/* <Link to="/Cats/:id">CatPage</Link> */}
                     <Link to="/About">About Us</Link>
                     <Link to="/Contact">Contact Us</Link>
+                    {/* When clicking the basket icon this triggers the toggleBasket function
+                        that opens and closes the basket.
+                    */}
                     <div onClick={toggleBasket} className="cart-container_basket">
                         <BsBasket size={40} />
                         <p>{basketItems.length}</p>
@@ -29,6 +31,7 @@ export default function NavBar({ toggleBasket, basketItems }) {
     );
 }
 
+// These are prop types to ensure that the correct data types are passed to the component.
 NavBar.propTypes = {
     toggleBasket: PropTypes.func,
     basketItems: PropTypes.array,
