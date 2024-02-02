@@ -1,16 +1,34 @@
-.aboutUs-container {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 10px solid #1c1a1a82;
-    border-radius: 20px;
+h1 {
     text-align: center;
-    font-size: larger;
+    color: white;
+    padding-bottom: 15px;
+    font-size: 3em;
 }
 
-
-.aboutUs-container img {
-    border-radius: 20px;
-    max-width: 100%;
-    height: 100%;
+.contentWrapper {
+    text-align: center;
+    border-bottom: 1px solid white;
+    color: white;
+    padding-bottom: 15px;
+    max-width: 70%;
+    margin: 0 auto;
 }
+
+main {
+    h2{
+        font-size: 1.5em;
+    }
+}
+
+.contentWrapper {
+    h4 {
+    text-align: center;
+    color: white;
+    padding-bottom: 15px;
+    font-size: 2em;
+    }
+    ul {
+        list-style-type: none;
+    }
+}
+

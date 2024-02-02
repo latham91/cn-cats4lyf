@@ -2,11 +2,11 @@ import "./Contact.css";
 
 const ContactUs = () => {
     return (
-        <footer className="bg-dark text-light">
+        <section className="contentWrapper">
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
-                        <h4> Cats for Life</h4>
+                        <h2>Contact Us</h2>
                         <p>We are here for you and your cats!</p>
                         <p>
                             Have a question, need assistance, or just want to talk about cats? We&apos;re all ears!
@@ -107,7 +107,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
     );
 };
 

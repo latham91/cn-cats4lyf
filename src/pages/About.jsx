@@ -7,7 +7,7 @@ const AboutUs = () => {
     // Oana Lupascu - About and Footer
 
     return (
-        <div>
+        <div className="aboutWrapper">
             <header>
                 <h1>About Us</h1>
             </header>
@@ -20,12 +20,12 @@ const AboutUs = () => {
 
                 <section>
                     <h2>Curating Quality Connections</h2>
-                    <p>We meticulously curate a selection of cats from reputable breeders and shelters, ensuring that each feline friend we offer is healthy, well-socialized, and ready to bring joy to your home. Our commitment to ethical practices and responsible breeding sets us apart in the industry.</p>
+                    <p>We meticulously curate a selection of cats from reputable breeders and shelters, ensuring that each feline friend we offer is healthy, well-socialised, and ready to bring joy to your home. Our commitment to ethical practices and responsible breeding sets us apart in the industry.</p>
                 </section>
 
                 <section>
                     <h2>Matchmaking Made Easy</h2>
-                    <p>Finding the right cat to join your family is a personal journey, and we're here to make it seamless. Our knowledgeable team provides personalized assistance, helping you navigate through various breeds, temperaments, and lifestyles to find the perfect match for your unique preferences.</p>
+                    <p>Finding the right cat to join your family is a personal journey, and we're here to make it seamless. Our knowledgeable team provides personalised assistance, helping you navigate through various breeds, temperaments, and lifestyles to find the perfect match for your unique preferences.</p>
                 </section>
 
                 <section>
@@ -40,14 +40,10 @@ const AboutUs = () => {
 
                 <section>
                     <h2>Giving Back</h2>
-                    <p>We understand the importance of giving back to our feline friends in need. Cats for Life is actively involved in charitable initiatives, supporting animal shelters and rescue organizations. When you choose Cats for Life, you're not just bringing home a cat – you are contributing to a cause that helps cats find loving homes.
+                    <p>We understand the importance of giving back to our feline friends in need. Cats for Life is actively involved in charitable initiatives, supporting animal shelters and rescue organisations. When you choose Cats for Life, you're not just bringing home a cat – you are contributing to a cause that helps cats find loving homes.
                     Join us at Cats for Life, where every purr-chase makes a difference. Your journey to a lifetime of cat companionship begins here.</p>
                 </section>
             </main>
-
-            <footer>
-                <p>insert footer here</p>
-            </footer>
         </div>
     );
 }
