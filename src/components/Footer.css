@@ -1,18 +1,25 @@
-.footer-about {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  color: #333;
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 10px;
   text-align: center;
 }
 
-.footer-about p {
-  margin-bottom: 10px;
+.social-media-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.footer-about a {
-  color: #007bff;
+.social-media-section a {
+  text-decoration: none;
+  color: #333; /* Replace with your preferred text color */
+  font-weight: bold;
 }
 
-.footer-about a:hover {
-  text-decoration: underline;
+.social-media-section a:hover {
+  color: #007bff; /* Replace with your preferred hover color */
 }
