@@ -1,6 +1,6 @@
-import {useParams}  from "react-router-dom";
-import { useState, useEffect } from "react";
-
+import { Link, useParams } from "react-router-dom";
+import PropTypes from "prop-types";
+import "./Catpage.css";
 
 // id: data[i].id,
 // name: faker.person.firstName(),
@@ -19,29 +19,41 @@ import { useState, useEffect } from "react";
 // weight: data[i].breeds[0].weight.metric,
 // rare: data[i].breeds[0].rare
 
-export default function CatPage({cat}) {
-    const [singleCatData, setSingleCatData] = useState([]);
-    const [loading, setLoading] = useState(false);
-
+export default function CatPage({ catData }) {
     const { id } = useParams();
 
-    const singleCat = cat.filter((item) => {
-        return item.id === id
-    })
-    
-    console.log(singleCat)
+    const cat = catData.find((cat) => cat.id === id);
 
-    if (!cat) {
-        return <div>Loading...</div>
-    } else {
-        return (
-            <section id="cat-page">
-                <p>{singleCat.name}</p>
-            </section>
-        );
-    }
-
-    console.log(singleCat)
-    console.log(singleCat.name)
-
+    return (
+        <section id="cat-page">
+            {!cat ? (
+                <div className="errorPage">
+                    <h2>404: Cat Not Found!</h2>
+                    <div>
+                        <Link to="/">BACK TO HOME PAGE</Link>
+                    </div>
+                </div>
+            ) : (
+                <div>
+                    <h1>{cat.name}</h1>
+                    <img src={cat.url} alt={cat.name} />
+                    <p>{cat.description}</p>
+                    <p>{cat.breed}</p>
+                    <p>{cat.price}</p>
+                    <p>{cat.breedDescription}</p>
+                    <p>{cat.temperament}</p>
+                    <p>{cat.origin}</p>
+                    <p>{cat.life_span}</p>
+                    <p>{cat.wikipedia_url}</p>
+                    <p>{cat.indoor}</p>
+                    <p>{cat.weight}</p>
+                    <p>{cat.rare}</p>
+                </div>
+            )}
+        </section>
+    );
 }
+
+CatPage.propTypes = {
+    catData: PropTypes.array,
+};

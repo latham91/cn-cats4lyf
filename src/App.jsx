@@ -33,7 +33,6 @@ export default function App() {
             setLoading(true);
             const response = await fetch(
                 `https://api.thecatapi.com/v1/images/search?limit=21&has_breeds=1&api_key=${apiKey}`
-
             );
 
             if (!response.ok) {
@@ -61,7 +60,7 @@ export default function App() {
                     wikipedia_url: data[i].breeds[0].wikipedia_url,
                     indoor: data[i].breeds[0].indoor,
                     weight: data[i].breeds[0].weight.metric,
-                    rare: data[i].breeds[0].rare
+                    rare: data[i].breeds[0].rare,
                 });
             }
 
@@ -161,7 +160,7 @@ export default function App() {
                     path="/"
                     element={<Homepage cats={catData} loading={loading} addToBasket={handleAddToBasket} />}
                 />
-                <Route path="/Cats/:id" element={<CatPage cat={catData}/>} />
+                <Route path="/Cats/:id" element={<CatPage catData={catData} />} />
                 <Route path="/About" element={<AboutUs />} />
                 <Route path="/Contact" element={<ContactUs />} />
                 <Route path="/Checkout" element={<CheckOut basketItems={basketItems} basketTotal={basketTotal}/>} />
