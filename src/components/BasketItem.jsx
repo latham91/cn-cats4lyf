@@ -9,7 +9,13 @@ export default function BasketItem({ id, name, breed, price, url, deleteFromBask
             <div className="basketItem_content">
                 <div className="basketItem_product_name">
                     <h4>{name}</h4>
-                    <FaRegTrashCan onClick={() => deleteFromBasket(id)} size={20} className="trashIcon" />
+                    <FaRegTrashCan
+                        // When the trash icon is clicked call the deleteFromBasket function
+                        // and pass the id of the item being deleted
+                        onClick={() => deleteFromBasket(id)}
+                        size={20}
+                        className="trashIcon"
+                    />
                 </div>
                 <span>BREED: {breed}</span>
                 <div className="basketItem_details">
@@ -17,6 +23,8 @@ export default function BasketItem({ id, name, breed, price, url, deleteFromBask
                     <div className="qty">
                         <span>Qty:</span>
                         <input
+                            // When the input value changes
+                            // call the changeQuantity function and pass the items id and new quantity value
                             onChange={(e) => changeQuantity(id, e.target.value)}
                             type="number"
                             min={1}
@@ -29,6 +37,7 @@ export default function BasketItem({ id, name, breed, price, url, deleteFromBask
     );
 }
 
+// These are prop types to ensure that the correct data types are passed to the component.
 BasketItem.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
