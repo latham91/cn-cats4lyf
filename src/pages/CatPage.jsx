@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 // id: data[i].id,
 // name: faker.person.firstName(),
@@ -19,9 +19,6 @@ import { useState, useEffect } from "react";
 // rare: data[i].breeds[0].rare
 
 export default function CatPage({ cat }) {
-    const [singleCatData, setSingleCatData] = useState([]);
-    const [loading, setLoading] = useState(false);
-
     const { id } = useParams();
 
     const singleCat = cat.filter((item) => {
@@ -39,11 +36,8 @@ export default function CatPage({ cat }) {
             </section>
         );
     }
-
-    console.log(singleCat);
-    console.log(singleCat.name);
 }
 
 CatPage.propTypes = {
-    catData: PropTypes.array,
+    cat: PropTypes.array,
 };
