@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
-
 const AboutUs = () => {
+    // Aaron Latham - Basket Functionality
+    // Ethan Rose - Card Component and Checkout Page
+    // Tofeeq Majeed - Navbar and Individual Cat Page
+    // Oana Lupascu - About and Footer
+
     return (
         <footer className="bg-dark text-light">
             <div className="container">
@@ -9,8 +12,8 @@ const AboutUs = () => {
                         <h4> Cats for Life</h4>
                         <p>We are here for you and your cats!</p>
                         <p>
-                            Have a question, need assistance, or just want to talk about cats? We're all ears! Contact
-                            Cats for Life through the following channels:
+                            Have a question, need assistance, or just want to talk about cats? We&apos;re all ears!
+                            Contact Cats for Life through the following channels:
                         </p>
                         <div>
                             <strong>Customer Support:</strong>
@@ -18,13 +21,12 @@ const AboutUs = () => {
                                 <li>
                                     Email: <a href="mailto:support@cats4lyf.com">support@cats4lyf.com</a>
                                 </li>
-                                <li>Phone: [01612453651]</li>
+                                <li>Phone: 01612453651</li>
                             </ul>
                             <strong>Visit Us:</strong>
                             <p>
                                 Cats for Life Headquarters
-                                <br />
-                                [2 Dale Street, Manchester, M3 5RD]
+                                <br />2 Dale Street, Manchester, M3 5RD
                             </p>
                         </div>
                     </div>
@@ -86,10 +88,10 @@ const AboutUs = () => {
                 <div className="row mt-4">
                     <div className="col-md-12">
                         <h4>Contact Us</h4>
-                        <p>We're Here for You and Your Cats!</p>
+                        <p>We&apos;re Here for You and Your Cats!</p>
                         <p>
-                            Have a question, need assistance, or just want to talk about cats? We're all ears! Contact
-                            Cats for Life through the following channels:
+                            Have a question, need assistance, or just want to talk about cats? We&apos;re all ears!
+                            Contact Cats for Life through the following channels:
                         </p>
                         <div>
                             <strong>Customer Support:</strong>
@@ -97,13 +99,12 @@ const AboutUs = () => {
                                 <li>
                                     Email: <a href="mailto:support@cats4lyf.com">support@cats4lyf.com</a>
                                 </li>
-                                <li>Phone: [01612453651]</li>
+                                <li>Phone: 01612453651</li>
                             </ul>
                             <strong>Visit Us:</strong>
                             <p>
                                 Cats for Life Headquarters
-                                <br />
-                                [2 Dale Street, Manchester, M3 5RD]
+                                <br />2 Dale Street, Manchester, M3 5RD
                             </p>
                         </div>
                     </div>
