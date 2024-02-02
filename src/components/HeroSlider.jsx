@@ -6,7 +6,7 @@ import "swiper/css";
 import SlideOne from "../images/1.png";
 import SlideTwo from "../images/2.png";
 import SlideThree from "../images/3.gif";
-import SlideFour from "../images/3.gif";
+import SlideFour from "../images/4.gif";
 
 
 export default function HeroSlider() {
