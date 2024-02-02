@@ -2,6 +2,7 @@ import "./BasketSlider.css";
 import PropTypes from "prop-types";
 import { BsXLg } from "react-icons/bs";
 import { useState, useRef } from "react";
+import { useHistory } from 'react-router-dom';
 
 // Component Imports
 import BasketItem from "./BasketItem";
@@ -9,6 +10,13 @@ import BasketItem from "./BasketItem";
 export default function BasketSlider({ toggleBasket, basketItems, deleteFromBasket, basketTotal, changeQuantity }) {
     const [slideIn, setSlideIn] = useState(false);
     const sliderBg = useRef();
+
+    const history = useHistory();
+
+    const handleCheckoutClick = () => {
+        // Navigate to the checkout page
+        history.push('/checkout');
+      };
 
     const handleCloseSlider = (e) => {
         // If user clicks outside the slider or the X icon, close the basket
@@ -53,7 +61,7 @@ export default function BasketSlider({ toggleBasket, basketItems, deleteFromBask
                         <strong>Total: </strong>
                         <span>{basketItems.length === 0 ? "£0.00" : `£${basketTotal}`}</span>
                     </p>
-                    <button className="sliderFooter_button">Checkout</button>
+                    <button className="sliderFooter_button" onClick={handleCheckoutClick}>Checkout</button>
                 </div>
             </div>
         </div>
