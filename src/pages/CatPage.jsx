@@ -34,20 +34,44 @@ export default function CatPage({ catData }) {
                     </div>
                 </div>
             ) : (
-                <div>
-                    <h1>{cat.name}</h1>
-                    <img src={cat.url} alt={cat.name} />
-                    <p>{cat.description}</p>
-                    <p>{cat.breed}</p>
-                    <p>{cat.price}</p>
-                    <p>{cat.breedDescription}</p>
-                    <p>{cat.temperament}</p>
-                    <p>{cat.origin}</p>
-                    <p>{cat.life_span}</p>
-                    <p>{cat.wikipedia_url}</p>
-                    <p>{cat.indoor}</p>
-                    <p>{cat.weight}</p>
-                    <p>{cat.rare}</p>
+                <div className="cat-page-container">
+                    <div className="cat-page-left">
+                        <img src={cat.url} alt="cat image" />
+                    </div>
+                    <div className="cat-page-right">
+                        <div>
+                            <h2>{cat.name}</h2>
+                        </div>
+                        <div></div>
+                        <p>Breed: {cat.breed}</p>
+                        <p>Price: ${cat.price}</p>
+                        <p>
+                            Breed Info: <br />
+                            {cat.breedDescription}
+                        </p>
+                        <p>
+                            Breed Traits: <br />
+                            {cat.temperament}
+                        </p>
+                        <p>
+                            Origin of breed: <br />
+                            {cat.origin}
+                        </p>
+                        <p>
+                            Life expectancy: <br />
+                            {cat.life_span} years
+                        </p>
+                        <a href={cat.wikipedia_url}>Wiki Link</a>
+                        <p>
+                            Cat type: <br />
+                            {cat.indoor === 0 ? "Outdoor Cat" : "Indoor Cat"}
+                        </p>
+                        <p>
+                            Average weight: <br />
+                            {cat.weight}
+                        </p>
+                        <p>Rare: {cat.rare === 1 ? "Yes" : "No"}</p>
+                    </div>
                 </div>
             )}
         </section>
