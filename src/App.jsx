@@ -14,6 +14,7 @@ import NavBar from "./components/NavBar";
 import AboutUs from "./pages/About";
 import ContactUs from "./pages/Contact";
 import BasketSlider from "./components/BasketSlider";
+import Footer from "./components/Footer"
 
 const apiKey = "live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw";
 
@@ -174,6 +175,7 @@ export default function App() {
                     changeQuantity={changeQuantity}
                 />
             )}
+            <Footer/>
         </>
     );
 }
