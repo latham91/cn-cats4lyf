@@ -1,56 +1,40 @@
-import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Footer.css"; // Create this stylesheet for additional styling
-
 const Footer = () => {
-    return (
-        <footer className="bg-dark text-light">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-4">
-                        <h4>Purradise Meowland</h4>
-                        <ul className="list-unstyled">
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About Us</Link>
-                            </li>
-                            <li>
-                                <Link to="/contact">Contact</Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="col-md-4">
-                        <h4>Products</h4>
-                        <ul className="list-unstyled">
-                            <li>
-                                <Link to="/cats">Cats</Link>
-                            </li>
-                            <li>
-                                <Link to="/dogs">Dogs</Link>
-                            </li>
-                            {/* Add more product categories as needed */}
-                        </ul>
-                    </div>
-                    <div className="col-md-4">
-                        <h4>Follow Us</h4>
-                        <ul className="list-unstyled">
-                            <li>
-                                <a href="https://facebook.com">Facebook</a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com">Twitter</a>
-                            </li>
-                            <li>
-                                <a href="https://instagram.com">Instagram</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+  return (
+    <footer className="footer-container">
+      <div className="container">
+        <div className="row">
+          
+        </div>
+
+        <div className="row mt-4">
+          <div className="col-md-12">
+            <h4 className="footer-heading">Contact Us</h4>
+            <p className="footer-content">We're Here for You and Your Cats!</p>
+            <p className="footer-content">
+              Have a question, need assistance, or just want to talk about cats? We're all ears! Contact Cats for Life through the following channels:
+            </p>
+            <div>
+              <strong className="footer-content">Customer Support:</strong>
+              <ul>
+                <li className="footer-content">Email: <a href="mailto:support@cats4lyf.com">support@cats4lyf.com</a></li>
+                <li className="footer-content">Phone: [01612453651]</li>
+              </ul>
+              <strong className="footer-content">Visit Us:</strong>
+              <p className="footer-content">Cats for Life Headquarters<br />[2 Dale Street, Manchester, M3 5RD]</p>
             </div>
-        </footer>
-    );
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
+
+
+
+
+
+
+
+

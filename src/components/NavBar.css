@@ -1,12 +1,15 @@
 #navBar {
     background-color: white;
-    padding: 10px;
+    width: 100%;
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 25px;
 }
 
 .logo {
@@ -15,22 +18,22 @@
 }
 
 .logo img {
-    width: 120px;
+    width: 100px;
     transition: font-size 0.3s ease;
 }
 
 .logo h1 {
-    color:black;
-    display:flex;
+    color: black;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
+    font-size: 50px;
     text-decoration: none;
+    margin: 0;
 }
 
-
-.pages{
-    display:flex;
+.pages {
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -39,7 +42,7 @@
 .pages a {
     text-decoration: none;
     color: black;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bolder;
 }
 
@@ -48,12 +51,13 @@
     align-items: center;
     color: black;
     gap: 3px;
+    cursor: pointer;
 }
 
 .cart-container_basket p {
     color: white;
     font-weight: bolder;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 20px;

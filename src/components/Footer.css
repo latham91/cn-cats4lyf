@@ -1,0 +1,18 @@
+.footer-about {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  color: #333;
+  text-align: center;
+}
+
+.footer-about p {
+  margin-bottom: 10px;
+}
+
+.footer-about a {
+  color: #007bff;
+}
+
+.footer-about a:hover {
+  text-decoration: underline;
+}
