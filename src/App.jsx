@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
 import { descriptions } from "./utility/FakerData";
 import { faker } from "@faker-js/faker";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Component Imports
 import Homepage from "./pages/Homepage";
@@ -15,6 +17,9 @@ import BasketSlider from "./components/BasketSlider";
 const apiKey = "live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw";
 
 export default function App() {
+    const notifyAdd = () => toast.success("Item added to basket");
+    const notifyDelete = () => toast.error("Item removed from basket");
+
     const [basketItems, setBasketItems] = useState([]);
     const [toggleBasket, setToggleBasket] = useState(false);
     const [catData, setCatData] = useState([]);
@@ -68,7 +73,6 @@ export default function App() {
     };
 
     const handleAddToBasket = (id, name, price, breed, imgSrc) => {
-        console.log(id);
         // If item is already in the basket
         const itemExists = basketItems.find((item) => item.id === id);
 
@@ -84,6 +88,7 @@ export default function App() {
             };
 
             setBasketItems([...basketItems, newItem]);
+            notifyAdd();
         } else {
             // If the item is already in the basket, increase the quantity by 1.
             const newBasket = basketItems.map((item) => {
@@ -97,6 +102,7 @@ export default function App() {
             });
 
             setBasketItems(newBasket);
+            notifyAdd();
         }
     };
 
@@ -104,6 +110,7 @@ export default function App() {
         const newBasket = basketItems.filter((item) => item.id !== id);
 
         setBasketItems(newBasket);
+        notifyDelete();
     };
 
     const calculateTotal = useCallback(() => {
@@ -136,6 +143,7 @@ export default function App() {
 
     return (
         <>
+            <ToastContainer position="top-center" autoClose={1500} />
             <NavBar toggleBasket={handleToggleBasket} basketItems={basketItems} />
             <Routes>
                 <Route
