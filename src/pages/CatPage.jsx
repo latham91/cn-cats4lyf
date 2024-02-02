@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
-import "./CatPage.css";
+import "./Catpage.css";
 
 // id: data[i].id,
 // name: faker.person.firstName(),
