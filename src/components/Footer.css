@@ -1,39 +1,18 @@
-.footer {
-  background-color: #343a40; /* Dark background color */
-  color: #fff; /* Text color */
-  padding: 50px 0; /* Top and bottom padding */
+.footer-about {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  color: #333;
+  text-align: center;
 }
 
-.footer h4 {
-  color: #ffc107; /* Yellow color for headings */
-}
-
-.footer p {
-  margin-bottom: 15px;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer ul li {
+.footer-about p {
   margin-bottom: 10px;
 }
 
-.footer a {
-  color: #fff;
+.footer-about a {
+  color: #007bff;
 }
 
-.footer a:hover {
+.footer-about a:hover {
   text-decoration: underline;
-}
-
-/* Additional Information Section Styles */
-.additional-info {
-  margin-top: 30px;
-}
-
-.additional-info h4 {
-  color: #ffc107;
 }
