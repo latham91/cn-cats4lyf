@@ -150,7 +150,7 @@ export default function App() {
                     path="/"
                     element={<Homepage cats={catData} loading={loading} addToBasket={handleAddToBasket} />}
                 />
-                <Route path="/Cats/:id" element={<CatPage />} />
+                <Route path="/Cats/:id" element={<CatPage catData={catData} />} />
                 <Route path="/About" element={<AboutUs />} />
                 <Route path="/Checkout" element={<CheckOut />} />
             </Routes>
