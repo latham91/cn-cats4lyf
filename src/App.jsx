@@ -191,7 +191,17 @@ export default function App() {
                 <Route path="/Cats/:id" element={<CatPage catData={catData} />} />
                 <Route path="/About" element={<AboutUs />} />
                 <Route path="/Contact" element={<ContactUs />} />
-                <Route path="/Checkout" element={<CheckOut basketItems={basketItems} basketTotal={basketTotal} />} />
+                <Route
+                    path="/Checkout"
+                    element={
+                        <CheckOut
+                            basketItems={basketItems}
+                            basketTotal={basketTotal}
+                            changeQuantity={changeQuantity}
+                            deleteFromBasket={handleDeleteFromBasket}
+                        />
+                    }
+                />
             </Routes>
             {toggleBasket && (
                 <BasketSlider
