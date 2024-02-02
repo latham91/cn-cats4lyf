@@ -51,6 +51,15 @@ export default function App() {
                     breed: data[i].breeds[0].name,
                     sex: faker.person.sex(),
                     url: data[i].url,
+
+                    breedDescription: data[i].breeds[0].description,
+                    temperament: data[i].breeds[0].temperament,
+                    origin: data[i].breeds[0].origin,
+                    life_span: data[i].breeds[0].life_span,
+                    wikipedia_url: data[i].breeds[0].wikipedia_url,
+                    indoor: data[i].breeds[0].indoor,
+                    weight: data[i].breeds[0].weight.metric,
+                    rare: data[i].breeds[0].rare
                 });
             }
 
@@ -150,7 +159,7 @@ export default function App() {
                     path="/"
                     element={<Homepage cats={catData} loading={loading} addToBasket={handleAddToBasket} />}
                 />
-                <Route path="/Cats/:id" element={<CatPage />} />
+                <Route path="/Cats/:id" element={<CatPage cat={catData}/>} />
                 <Route path="/About" element={<AboutUs />} />
                 <Route path="/Checkout" element={<CheckOut />} />
             </Routes>

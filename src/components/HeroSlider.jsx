@@ -25,6 +25,7 @@ export default function HeroSlider() {
                 <SwiperSlide>
                     <img className="slider-image" src={SlideTwo} alt="Hero Slide Two" />
                 </SwiperSlide>
+                
 
                 <SwiperSlide>
                     <img className="slider-image" src={SlideThree} alt="Hero Slide Three" />
