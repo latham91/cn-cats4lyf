@@ -3,7 +3,7 @@ import { useState } from "react";
 import BasketItem from "../components/BasketItem";
 import PropTypes from "prop-types";
 
-const Checkout = ({ basketItems, basketTotal }) => {
+const Checkout = ({ basketItems, basketTotal, deleteFromBasket, changeQuantity }) => {
     // State to hold the form data
     const [formData, setFormData] = useState({
         fullName: "",
@@ -32,14 +32,14 @@ const Checkout = ({ basketItems, basketTotal }) => {
     };
 
     return (
-        <div>
+        <div className="checkoutPage-container">
             <h2>Checkout Page</h2>
             {/* If the purchase is complete then show the purchase complete paragraph
                 else map through the basketItems state that has been passed as a prop from the App.jsx
                 and display the BasketItem component for each specified item in the basketItems state.
             */}
             {purchaseComplete ? (
-                <p>Purchase Complete! Thank you for your order.</p>
+                <p className="purchase-complete">Purchase Complete! Thank you for your order.</p>
             ) : (
                 <>
                     <div className="checkoutItems">
@@ -52,10 +52,12 @@ const Checkout = ({ basketItems, basketTotal }) => {
                                 price={item.price}
                                 url={item.url}
                                 quantity={item.quantity}
+                                deleteFromBasket={deleteFromBasket}
+                                changeQuantity={changeQuantity}
                             />
                         ))}
                     </div>
-                    <div className="total">Total: £{basketTotal}</div>
+                    <div className="total">Total: £{basketItems.length === 0 ? "0.00" : basketTotal}</div>
                     <form onSubmit={handleSubmit}>
                         <label>
                             Full Name:
@@ -103,4 +105,6 @@ export default Checkout;
 Checkout.propTypes = {
     basketItems: PropTypes.array,
     basketTotal: PropTypes.number,
+    deleteFromBasket: PropTypes.func,
+    changeQuantity: PropTypes.func,
 };

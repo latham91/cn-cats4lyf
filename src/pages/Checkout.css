@@ -1,63 +1,65 @@
-/* checkout.css */
-
-/* Container styling */
-/* div {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-  } */
-  
-  /* Header styling */
-  h2 {
+/* checkout page container div */
+.checkoutPage-container {
+    margin-top: auto;
+}
+/* Header styling */
+h2 {
     text-align: center;
     border-bottom: 1px solid white;
     color: white;
     padding-bottom: 15px;
     font-size: 3em;
-  }
-  
-  /* Checkout items styling */
-  .checkoutItems {
+}
+
+.purchase-complete {
+    height: 67vh;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* Checkout items styling */
+.checkoutItems {
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
     margin-bottom: 10px;
     max-width: 70%;
     margin: 0 auto;
-  }
-  
-  /* Basket item styling */
-  .basket-item {
+}
+
+/* Basket item styling */
+.basket-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-  }
-  
-  .basket-item img {
+}
+
+.basket-item img {
     max-width: 50px;
     margin-right: 10px;
-  }
-  
-  /* Form styling */
-  form {
+}
+
+/* Form styling */
+form {
     display: flex;
     flex-direction: column;
     max-width: 70%;
     margin: auto;
     padding: 20px;
-  }
-  
-  label {
+    height: 60vh;
+}
+
+label {
     margin-bottom: 8px;
-  }
-  
-  input,
-  textarea {
+}
+
+input,
+textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 12px;
-  }
-  
-  button {
+}
+
+button {
     background-color: #4caf50;
     color: white;
     padding: 10px;
@@ -65,21 +67,20 @@
     max-width: 600px;
     margin: auto;
     padding: 20px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #45a049;
-  }
-  
-  /* Purchase completion message styling */
-  .purchase-message {
+}
+
+/* Purchase completion message styling */
+.purchase-message {
     color: #4caf50;
     font-weight: bold;
-  }
+}
 
-  .total {
+.total {
     text-align: center;
     border-bottom: 1px solid white;
     font-size: 2em;
-  }
-  
+}
