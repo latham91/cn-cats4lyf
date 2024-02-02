@@ -12,6 +12,7 @@ import CatPage from "./pages/CatPage";
 import CheckOut from "./pages/CheckOut";
 import NavBar from "./components/NavBar";
 import AboutUs from "./pages/About";
+import ContactUs from "./pages/Contact";
 import BasketSlider from "./components/BasketSlider";
 
 const apiKey = "live_WsdZaAcnisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw";
@@ -162,7 +163,8 @@ export default function App() {
                 />
                 <Route path="/Cats/:id" element={<CatPage cat={catData}/>} />
                 <Route path="/About" element={<AboutUs />} />
-                <Route path="/Checkout" element={<CheckOut />} />
+                <Route path="/Contact" element={<ContactUs />} />
+                <Route path="/Checkout" element={<CheckOut basketItems={basketItems} basketTotal={basketTotal}/>} />
             </Routes>
             {toggleBasket && (
                 <BasketSlider

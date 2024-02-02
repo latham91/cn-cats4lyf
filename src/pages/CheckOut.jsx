@@ -1,7 +1,8 @@
 import "./Checkout.css";
 import { useState } from "react";
+import BasketItem from "../components/BasketItem";
 
-const Checkout = () => {
+const Checkout = ({basketItems, basketTotal}) => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -32,6 +33,23 @@ const Checkout = () => {
       {purchaseComplete ? (
         <p>Purchase Complete! Thank you for your order.</p>
       ) : (
+        <><div className="checkoutItems">
+        {basketItems.map((item) => (
+            <BasketItem
+                key={item.id}
+                id={item.id}
+                name={item.name}
+                breed={item.breed}
+                price={item.price}
+                url={item.url}
+                quantity={item.quantity}
+            />
+           
+        ))}
+    </div>
+        <div>
+            {basketTotal}
+        </div>
       <form onSubmit={handleSubmit}>
         <label>
           Full Name:
@@ -78,9 +96,11 @@ const Checkout = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
+      </>
       )}
       </div>
+
     );
   };
 
-export default Checkout;
+  export default Checkout;
