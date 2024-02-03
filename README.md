@@ -110,3 +110,11 @@ These pages collectively create a user-friendly and engaging journey through the
 -   [**eslint-plugin-react:** ^7.33.2](https://www.npmjs.com/package/eslint-plugin-react)
 -   [**eslint-plugin-react-hooks:** ^4.6.0](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 -   [**eslint-plugin-react-refresh:** ^0.4.5](https://www.npmjs.com/package/eslint-plugin-react-refresh)
+
+## Acknowledgment of API Terms and Conditions
+
+We, the undersigned, hereby acknowledge that we have read and understood the terms and conditions outlined for the usage of The Dog API and The Cat API. We commit to comply with the stipulated guidelines and rules provided by the API providers.
+
+Our usage of the API is strictly for educational purposes, and we assure that the data obtained will be used solely to assist our project. Furthermore, we acknowledge that everything used on our website, including software, tools, and libraries, is free and open source.
+
+We understand and agree not to engage in any activities that violate the privacy, security, or terms specified in the API documentation.
