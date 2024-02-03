@@ -1,9 +1,0 @@
-git add .
-gt commit -m "initialcommit"
-git pull origin development
-git push origin SW
-then make a pull a request in the development branch
-
-https://github.com/latham91/cn-cats4lyf
-
-hello
