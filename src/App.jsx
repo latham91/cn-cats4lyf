@@ -186,7 +186,7 @@ export default function App() {
             <Routes>
                 <Route
                     path="/"
-                    element={<Homepage cats={catData} loading={loading} addToBasket={handleAddToBasket} />}
+                    element={<Homepage cats={catData} loading={loading} handleAddToBasket={handleAddToBasket} />}
                 />
                 <Route path="/Cats/:id" element={<CatPage catData={catData} />} />
                 <Route path="/About" element={<AboutUs />} />
