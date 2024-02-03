@@ -5,7 +5,7 @@ import HeroSlider from "../components/HeroSlider";
 
 import { Card } from "../components/Card";
 
-export default function Homepage({ cats, loading, addToBasket }) {
+export default function Homepage({ cats, loading, handleAddToBasket }) {
     return (
         <section id="homepage">
             <HeroSlider />
@@ -27,7 +27,7 @@ export default function Homepage({ cats, loading, addToBasket }) {
                             sex={cat.sex}
                             imgSrc={cat.url}
                             link={`/Cats/${cat.id}`}
-                            addToBasket={addToBasket} // This is the function to add an item to the basket
+                            addToBasket={handleAddToBasket} // This is the function to add an item to the basket
                         />
                     ))
                 ) : (
@@ -44,5 +44,5 @@ export default function Homepage({ cats, loading, addToBasket }) {
 Homepage.propTypes = {
     cats: PropTypes.array,
     loading: PropTypes.bool,
-    addToBasket: PropTypes.func,
+    handleAddToBasket: PropTypes.func,
 };
