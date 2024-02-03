@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
-import "./Catpage.css";
+import "./CatPage.css";
 
 export default function CatPage({ catData }) {
     const { id } = useParams(); // Get the id parameter from the url. eg: /Cats/1, 1 is the id.
