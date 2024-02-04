@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="xva2MECG3VPQPZKDk1kb" name="Page-1">
-        <mxGraphModel dx="4319" dy="1825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel dx="2369" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -30,7 +30,7 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="67" value="https://api.thecatapi.com/v1/images/search?limit=10&lt;br&gt;&amp;amp;breed_ids=beng&amp;amp;api_key=live_WsdZaAc&lt;br&gt;nisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;fontSize=6;html=1;gradientColor=none;" parent="1" vertex="1">
+                <mxCell id="67" value="https://api.thecatapi.com/v1/images/search?limit=10&lt;br&gt;&amp;amp;breed_ids=beng&amp;amp;api_key=live_WsdZaAc&lt;br&gt;nisLiWqYkDONH329FCuNncM9Ghti7CBiUWgKGWW92FJN2rKOe4vFct8bw" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;html=1;gradientColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-862" y="135" width="230" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="181" value="name" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -48,7 +48,7 @@
                 <mxCell id="192" value="chatGPT" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="-612" y="75" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="193" value="random cat descriptions" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=#000000;" parent="1" vertex="1">
+                <mxCell id="193" value="random cat descriptions" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-627" y="135" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="196" value="API" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
