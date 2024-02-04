@@ -113,7 +113,7 @@ These pages collectively create a user-friendly and engaging journey through the
 
 ## Acknowledgment of API Terms and Conditions
 
-We, the undersigned, hereby acknowledge that we have read and understood the terms and conditions outlined for the usage of The Cat API. We commit to comply with the stipulated guidelines and rules provided by the API providers.
+We, the undersigned, hereby acknowledge that we have read and understood the terms and conditions outlined for the usage of The Dog API and The Cat API. We commit to comply with the stipulated guidelines and rules provided by the API providers.
 
 Our usage of the API is strictly for educational purposes, and we assure that the data obtained will be used solely to assist our project. Furthermore, we acknowledge that everything used on our website, including software, tools, and libraries, is free and open source.
 
